@@ -584,6 +584,26 @@ html.dopen .wa{opacity:0;pointer-events:none}
 .mark:hover .jam{opacity:.7}
 .dhead .mark .jam{height:26px}
 @media(max-width:760px){.top .mark .jam{height:22px}}
+
+/* ===== v10: header glass dark, stroke fosco ===== */
+:root[data-theme] .top .wrap{
+ background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(255,255,255,0) 60%),rgba(16,16,18,.8);
+ -webkit-backdrop-filter:blur(26px) saturate(1.35) brightness(.92);backdrop-filter:blur(26px) saturate(1.35) brightness(.92);
+ box-shadow:inset 0 1px 0 rgba(255,255,255,.05),0 20px 44px -18px rgba(0,0,0,.5),0 2px 6px rgba(0,0,0,.18);color:#F2F2F0}
+:root[data-theme="dark"] .top .wrap{background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,0) 60%),rgba(24,24,26,.55)}
+:root[data-theme] .top .wrap::before{background:radial-gradient(160px 60px at var(--hx,22%) var(--hy,0%),rgba(255,255,255,.10),transparent 70%);opacity:1}
+:root[data-theme] .top .wrap::after{background:rgba(255,255,255,.075)}
+:root[data-theme] .top .mark{color:#fff}
+:root[data-theme] .top nav a{color:rgba(255,255,255,.6)}
+:root[data-theme] .top nav a:hover{color:#fff}
+:root[data-theme] .top nav a[aria-current="page"]{background:rgba(255,255,255,.09);color:#fff;box-shadow:none}
+:root[data-theme] .top .theme,:root[data-theme] .top .burger,:root[data-theme] .top .soc a,:root[data-theme] .top .lang{border-color:rgba(255,255,255,.09);color:rgba(255,255,255,.85);background:transparent}
+:root[data-theme] .top .theme:hover,:root[data-theme] .top .burger:hover{background:rgba(255,255,255,.07);color:#fff}
+:root[data-theme] .top .soc a:hover{background:rgba(255,255,255,.1);color:#fff}
+:root[data-theme] .top .lang button{color:rgba(255,255,255,.55)}
+:root[data-theme] .top .lang button:hover{color:#fff}
+:root[data-theme] .top .lang button[aria-pressed="true"]{background:rgba(255,255,255,.12);color:#fff}
+:root[data-theme] .top :focus-visible{outline-color:rgba(255,255,255,.7)}
 </style>
 </head>
 <body>
