@@ -1,3 +1,4 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -8,7 +9,7 @@
 <meta property="og:title" content="João Arthur Vasconcellos — Product Designer">
 <meta property="og:description" content="15+ anos desenhando e escalando e-commerce para marcas como Acer, Mary Kay e Dengo.">
 <meta property="og:type" content="website">
-<meta name="theme-color" content="#0F0F10">
+<meta name="theme-color" content="#0B2239">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20512%20512%22%3E%3Crect%20width%3D%22512%22%20height%3D%22512%22%20rx%3D%22112%22%20fill%3D%22%23121212%22/%3E%3Cg%20transform%3D%22translate%2896%20136.18%29%20scale%280.73059%29%20translate%28-18%20-19.5%29%22%3E%3Cpath%20fill%3D%22%23FFFFFF%22%20d%3D%22M156.5%2019.5H222.5V238C222.5%20305%20182%20347.5%20118%20347.5C72%20347.5%2036%20324%2018%20300.5L59.5%20255.5C73%20275%2092%20288%20116%20288C140%20288%20156.5%20271%20156.5%20240ZM222.5%2019.5H288L456%20347H389.5Z%22/%3E%3C/g%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -900,6 +901,367 @@ section.ab3 .wrap{position:relative;z-index:2;width:100%}
 @media(max-width:860px){section.ab3{display:block;min-height:0}
  .ab3-ph{position:relative;display:block;width:100%;height:auto;aspect-ratio:4/3.4;object-position:50% 25%;-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent)}
  .ab3-t{max-width:none;padding:0 0 80px;margin-top:-48px}}
+
+/* ===== v24: redesign visual — tracking -1.5px, escala maior, cor das marcas ===== */
+:root{--track:-1.5px;--track-md:-.8px;--track-lead:-.4px;--track-sm:-.2px;--fog:#F5F5F3;--r-xl:32px;--r-lg:22px}
+:root[data-theme="dark"]{--fog:#19191B}
+body{letter-spacing:var(--track-sm)}
+h1,h2,.ph,.big,.stats b,.aud-t,.word,.fw,.step::before,.tl .when,.tl h3,.go h3,.dnav a{letter-spacing:var(--track)!important}
+h3,.acc summary{letter-spacing:var(--track-md)!important}
+.lead,.dd-lead,.ab-l,.sub,.aud-tx b,.cx p,h4{letter-spacing:var(--track-lead)!important}
+.nb{white-space:nowrap}
+.mk,.dd .mk,.ab3 .mk{background:none;padding:0}
+.wrap{max-width:1280px;padding:0 32px}
+.top .wrap{width:min(1216px,calc(100% - 28px))}
+h2{font-size:clamp(2.25rem,5.2vw,4.5rem);font-weight:500;line-height:1;max-width:15ch;margin-bottom:64px}
+section{padding:144px 0}
+section.alt{background:var(--fog);border-block:0}
+.lead{line-height:1.45}
+.btn{border-radius:999px;padding:16px 26px;font-weight:500;font-size:1.02rem}
+.btn.ghost{border:1px solid color-mix(in srgb,var(--ink) 24%,transparent)}
+.pill{padding:8px 16px;font-size:.92rem}
+.eye-s,.deye,.cx h4,.reel .pill{text-transform:none;letter-spacing:0;font-size:.95rem;font-weight:500}
+
+/* hero */
+.band.hero{padding:176px 0 112px}
+.band.hero .center{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:72px;text-align:left;align-items:start;justify-items:start}
+.band.hero .center>.pill{grid-column:1/-1}
+.band.hero .center>.ph{grid-column:1/-1;font-size:clamp(2.9rem,8.1vw,7.5rem);line-height:.95;font-weight:500;max-width:none;margin:32px 0 0;text-wrap:balance}
+.band.hero .center>.lead{grid-column:1;margin:56px 0 0;max-width:42ch;font-size:clamp(1.1rem,1.7vw,1.4rem);color:var(--muted)}
+.band.hero .center>.row{grid-column:1;justify-content:flex-start;margin-top:36px}
+.band.hero .center>.stats{grid-column:2;grid-row:3/5;align-self:end;justify-self:stretch;width:auto;margin:56px 0 0;grid-template-columns:1fr 1fr;gap:0 32px;border:0;border-radius:0;background:none;-webkit-backdrop-filter:none;backdrop-filter:none;overflow:visible}
+.band.hero .stats div{padding:16px 0 26px;border-left:0;border-top:1px solid color-mix(in srgb,var(--ink) 16%,transparent)}
+.band.hero .stats b{font-size:clamp(2.6rem,4.6vw,4.25rem);font-weight:500;line-height:.95}
+.band.hero .stats span{margin-top:10px;font-size:.95rem;max-width:22ch}
+.band.hero .center>.hc{grid-column:1/-1;width:100%;margin:96px 0 0;position:relative}
+.hc-stage{aspect-ratio:16/8.7;border:0;border-radius:var(--r-xl);background-color:color-mix(in srgb,var(--cc,#8a8a8a) 16%,var(--bg));background-image:radial-gradient(70% 90% at 82% 0%,rgba(255,255,255,.6),transparent 62%);transition:background-color .9s ease}
+:root[data-theme="dark"] .hc-stage{background-color:color-mix(in srgb,var(--cc,#8a8a8a) 24%,var(--bg));background-image:radial-gradient(70% 90% at 82% 0%,rgba(255,255,255,.07),transparent 62%)}
+.hc-s{padding:104px 11% 0}
+.hc-win{border-radius:14px 14px 0 0;border:0;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 10%,transparent),0 60px 110px -50px color-mix(in srgb,var(--cc,#000) 55%,#000)}
+.hc-ph{right:5.5%;bottom:-12%;width:15.5%;border-radius:30px}
+.hc-bar{position:absolute;z-index:3;left:0;right:0;top:0;margin:0;padding:30px 36px;pointer-events:none}
+.hc-bar .hc-dots{pointer-events:auto}
+.hc-logo{height:34px}
+.hc-logo .logo{height:calc(22px * var(--k,1))!important;max-height:40px;max-width:180px}
+.hc-seg{font-size:1rem;color:color-mix(in srgb,var(--ink) 62%,transparent)}
+.hc-n{font-size:.9rem;color:color-mix(in srgb,var(--ink) 62%,transparent)}
+.hc-dots button::before{background:color-mix(in srgb,var(--ink) 18%,transparent)}
+@media(max-width:900px){
+ .band.hero .center{grid-template-columns:minmax(0,1fr)}
+ .band.hero .center>.stats{grid-column:1;grid-row:auto;margin-top:56px}
+ .band.hero .center>.lead{margin-top:36px}
+}
+@media(max-width:700px){
+ .wrap{padding:0 20px}
+ .band.hero{padding:132px 0 72px}
+ .band.hero .center>.ph{line-height:.98;margin-top:24px}
+ .band.hero .center>.hc{margin-top:56px}
+ .hc-stage{aspect-ratio:4/3.5;border-radius:22px}
+ .hc-s{padding:8% 6% 0}
+ .hc-ph{width:25%;right:4%;border-radius:20px}
+ .hc-bar{position:static;padding:0;margin-top:16px;pointer-events:auto}
+ .hc-logo .logo{height:calc(15px * var(--k,1))!important}
+ section{padding:96px 0}
+ h2{margin-bottom:40px}
+ .sub{margin:-16px 0 48px}
+}
+
+/* marcas */
+.strip .logo{--lh:24px}
+.strip-label{font-size:.95rem;letter-spacing:0}
+
+/* cases (reel) */
+.reel .rh{margin-bottom:72px}
+.reel .rh h2{font-size:clamp(2.25rem,5.2vw,4.5rem);font-weight:500;max-width:20ch;margin-top:18px}
+.rgrid{grid-template-columns:minmax(0,3.5fr) minmax(0,8.5fr);gap:64px}
+.reel .rstage{--cc:inherit;height:clamp(400px,50vw,690px);border:0;border-radius:var(--r-xl);background-color:color-mix(in srgb,var(--cc,#8a8a8a) 16%,var(--bg));background-image:radial-gradient(70% 90% at 82% 0%,rgba(255,255,255,.6),transparent 62%);transition:background-color .7s ease}
+:root[data-theme="dark"] .reel .rstage{background-color:color-mix(in srgb,var(--cc,#8a8a8a) 24%,var(--bg));background-image:radial-gradient(70% 90% at 82% 0%,rgba(255,255,255,.07),transparent 62%)}
+.reel .slide{padding:72px 56px 0}
+.reel .browser,.reel .stage:hover .browser{width:86%;border-radius:14px 14px 0 0;border:0;box-shadow:0 0 0 1px color-mix(in srgb,var(--ink) 10%,transparent),0 60px 110px -50px color-mix(in srgb,var(--cc,#000) 55%,#000)}
+.reel .phone{right:52px;bottom:-56px;width:19%;border-width:5px;border-radius:28px}
+.reel .openp{right:20px;top:20px;border-radius:999px;border:0;padding:10px 16px;background:var(--bg)}
+:root[data-theme="dark"] .reel .openp{background:var(--surface)}
+@media(min-width:861px){
+ .reel .ri,.reel .ri:hover,.reel .ri.on{padding:24px 0 24px 18px}
+ .reel .ri::before{width:3px}
+ .reel .ri.on::before{background:var(--cc,var(--ink))}
+ .reel .ri .nm{--lh:20px;min-height:30px}
+ .reel .ri .sg{font-size:.88rem}
+ .reel .rcol .rstage{height:clamp(400px,50vw,690px)}
+}
+@media(max-width:860px){.rgrid{grid-template-columns:minmax(0,1fr);gap:32px}.reel .rstage{border-radius:22px}.reel .slide{padding:48px 20px 0}.reel .phone{right:16px;width:24%}}
+.cx{margin-top:80px}
+.cx p{font-size:1.12rem;line-height:1.55}
+.cx h4{color:var(--muted);margin-bottom:16px}
+.cx-n{font-size:.9rem;letter-spacing:0}
+
+/* dados */
+section.dd{padding:144px 0}
+.dd-grid{grid-template-columns:minmax(0,1fr);gap:72px}
+.dd-head{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);column-gap:72px;align-items:end}
+.dd-head>.pill{grid-column:1/-1;justify-self:start}
+.dd .dd-head>h2{grid-column:1;font-size:clamp(2.4rem,6vw,5.25rem);max-width:12ch;margin:24px 0 0}
+.dd-head>.dd-lead{grid-column:2;margin:0;max-width:38ch}
+.dd-head>.dd-tools{grid-column:1/-1;margin-top:56px}
+.dd-list{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:16px;border:0}
+.dd-list li{grid-column:span 2;display:flex;flex-direction:column;gap:0;min-height:280px;padding:28px 28px 30px;border:1px solid rgba(255,255,255,.1);border-radius:var(--r-lg);background:rgba(255,255,255,.04)}
+.dd-list li:nth-child(-n+2){grid-column:span 3}
+.dd-n{display:none}
+.dd-list li>svg,.dd-list li>i{width:30px;height:30px;margin:0 0 auto}
+.dd-list h3{font-size:1.7rem;font-weight:500;margin:48px 0 10px}
+.dd-list p{font-size:1.02rem}
+@media(max-width:960px){.dd-head{grid-template-columns:minmax(0,1fr)}.dd-head>.dd-lead{grid-column:1;margin-top:28px}.dd-list li,.dd-list li:nth-child(-n+2){grid-column:span 3}.dd-list li:last-child{grid-column:1/-1}}
+@media(max-width:600px){section.dd{padding:96px 0}.dd-list li,.dd-list li:nth-child(-n+2){grid-column:1/-1;min-height:0;padding:24px}.dd-list h3{margin-top:36px}}
+
+/* processo */
+.sub{font-size:1.2rem;margin:-36px 0 72px;max-width:48ch}
+.proc{gap:0;border-top:1px solid var(--ink)}
+.step{border:0;border-radius:0;background:none;padding:26px 28px 8px 0}
+.step+.step{border-left:1px solid color-mix(in srgb,var(--ink) 14%,transparent);padding-left:28px}
+.step::before{content:counter(st,decimal-leading-zero);font:500 clamp(3.5rem,6.4vw,5.75rem)/1 var(--display);color:var(--ink);margin-bottom:64px}
+.step h3{font-size:1.7rem;font-weight:500}
+.step p{font-size:1.02rem}
+.step li{background:var(--bg);font-size:.85rem;padding:6px 12px}
+@media(max-width:960px){.step:nth-child(3){border-left:0;padding-left:0}.step:nth-child(n+3){border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent);margin-top:32px}}
+@media(max-width:600px){.step,.step+.step{border-left:0;padding:24px 0 8px}.step+.step{border-top:1px solid color-mix(in srgb,var(--ink) 14%,transparent);margin-top:24px}.step::before{margin-bottom:32px}}
+
+/* continue explorando */
+.page#p-inicio .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.panel.go{display:flex;flex-direction:column;min-height:340px;padding:32px;border:0;border-radius:var(--r-lg);background:var(--fog);transition:background .3s,color .3s}
+.panel.go svg.big,.panel.go i.big{width:32px;height:32px;margin:0 0 auto;color:inherit}
+.panel.go .arr{right:32px;top:32px;width:26px;height:26px;color:inherit}
+.panel.go h3{font-size:clamp(2rem,3.2vw,2.9rem);font-weight:500;margin:48px 0 12px}
+.panel.go p{margin:0;transition:color .3s}
+.panel.go:nth-child(n):hover{background:var(--ink);color:var(--bg);border-color:transparent;transform:none}
+.panel.go:nth-child(n):hover p{color:color-mix(in srgb,var(--bg) 68%,transparent)}
+.panel.go:nth-child(n):hover .arr{color:inherit}
+@media(max-width:860px){.page#p-inicio .grid{grid-template-columns:minmax(0,1fr)}.panel.go{min-height:220px}}
+
+/* sobre + faq */
+.ab3 h2{font-size:clamp(2.2rem,4.4vw,3.75rem);max-width:13ch}
+.ab3-t{max-width:520px}
+.ab3 .ab-l{font-size:1.15rem}
+.faq h2{max-width:10ch}
+.acc summary{font-size:clamp(1.25rem,2.1vw,1.7rem);font-weight:500;padding:32px 0}
+.acc details p{font-size:1.05rem}
+
+/* cabeçalho das páginas internas */
+.band{padding:208px 0 112px}
+.ph{font-size:clamp(3.4rem,13vw,11.5rem);line-height:.88;font-weight:500}
+.ph em,#p-cases .ph em{color:color-mix(in srgb,var(--ink) 30%,var(--bg))}
+.band .lead{margin-top:56px;font-size:clamp(1.15rem,1.9vw,1.5rem);max-width:40ch}
+@media(max-width:700px){.band{padding:148px 0 72px}.band .lead{margin-top:36px}}
+
+/* experiência */
+.tl{border-left:0;border-top:1px solid var(--ink)}
+.tl li::before{display:none}
+.tl>li{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);column-gap:72px;padding:48px 0 72px;border-bottom:1px solid var(--line)}
+.tl>li:last-child{border-bottom:0;padding-bottom:0}
+.tl .when{grid-column:1;grid-row:1/span 3;font:500 clamp(1.5rem,2.8vw,2.4rem)/1.1 var(--display);color:var(--muted);padding-top:.35em}
+.tl>li>h3{grid-column:2;font-size:clamp(2.6rem,6vw,5rem);font-weight:500;margin:0 0 12px}
+.tl>li>div{grid-column:2;font-size:1.2rem;color:var(--muted)}
+.tl>li>ul{grid-column:2;list-style:none;margin:36px 0 0;padding:0;max-width:none;color:var(--ink)}
+.tl li li{padding:16px 0;margin:0;border-top:1px solid var(--line);font-size:1.05rem;color:var(--muted)}
+@media(max-width:800px){.tl>li{grid-template-columns:minmax(0,1fr);padding:36px 0 56px}.tl .when,.tl>li>h3,.tl>li>div,.tl>li>ul{grid-column:1;grid-row:auto}.tl .when{padding:0 0 20px}}
+
+/* competências */
+#p-competencias .grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+#p-competencias .panel{border:0;border-radius:var(--r-lg);background:var(--fog);padding:32px 32px 28px}
+#p-competencias .panel h3{font-size:1.9rem;font-weight:500;margin:0 0 28px}
+#p-competencias .panel h3 svg,#p-competencias .panel h3 i{display:block;width:30px;height:30px;margin:0 0 72px;color:var(--ink)}
+#p-competencias .chip{background:var(--bg);border:0;padding:8px 14px;margin:0 4px 8px 0;font-size:.92rem}
+@media(max-width:960px){#p-competencias .grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){#p-competencias .grid{grid-template-columns:minmax(0,1fr)}#p-competencias .panel h3 svg,#p-competencias .panel h3 i{margin-bottom:40px}}
+
+/* áudio */
+.aud-player{border:0;border-radius:var(--r-lg)}
+.aud-t{font-size:clamp(1.9rem,3.6vw,3rem);font-weight:500}
+
+/* contato */
+#p-contato .band{display:flex;align-items:flex-end;min-height:calc(100vh - 44px)!important;padding-bottom:96px}
+#p-contato .band>.wrap{width:100%}
+.big{font-size:clamp(3rem,9.6vw,8.75rem);font-weight:500;line-height:.92;max-width:11ch}
+
+/* rodapé */
+footer{--ink:#F2F2F0;--muted:#A3A3A0;background:#0F0F10;color:#A3A3A0;border-top:1px solid rgba(255,255,255,.1);padding:40px 0;overflow:hidden}
+.fw{max-width:1280px;margin:0 auto 80px;padding:0 32px;font:500 clamp(3.2rem,13.6vw,12.4rem)/.84 var(--display);color:#F2F2F0;white-space:nowrap}
+@media(max-width:700px){footer{padding-top:32px}}
+
+/* ===== v25: direção inspirada na Stripe — navy + índigo, malha de gradiente inclinada, cartões com sombra em camadas ===== */
+:root{--ink:#0B2239;--muted:#4A5B6E;--line:#E3E8EE;--fog:#F6F9FC;--surface:#FFFFFF;--accent:#5A4FF3;--lime:#5A4FF3;--yel:#5A4FF3;--pk:#5A4FF3;--on:#FFFFFF;--neu:#0B2239;--acc-l:#A9A3FF;
+ --g1:#FF7A3D;--g2:#E0277E;--g3:#5A4FF3;--g4:#FFB648;--g5:#BDB8FF;
+ --sh-sm:0 0 0 1px rgba(11,34,57,.06),0 6px 14px -6px rgba(11,34,57,.12),0 2px 4px -2px rgba(11,34,57,.08);
+ --sh:0 0 0 1px rgba(11,34,57,.05),0 30px 60px -14px rgba(50,50,93,.22),0 18px 36px -18px rgba(0,0,0,.26);
+ --r-xl:16px;--r-lg:12px}
+:root[data-theme="dark"]{--bg:#0A1929;--surface:#112840;--ink:#F6F9FC;--muted:#A9B8C8;--line:#1F3852;--fog:#0E2238;--accent:#8F88FF;--lime:#8F88FF;--yel:#8F88FF;--pk:#8F88FF;--on:#0A1929;--neu:#061322;--g5:#3B3791;
+ --sh-sm:0 0 0 1px rgba(255,255,255,.07),0 8px 18px -8px rgba(0,0,0,.5);
+ --sh:0 0 0 1px rgba(255,255,255,.09),0 30px 60px -14px rgba(0,0,0,.6),0 18px 36px -18px rgba(0,0,0,.5)}
+h1,h2,.ph,.big{font-weight:600}
+.band.hero .center>.ph,.reel .rh h2,.dd .dd-head>h2,.ab3 h2,.big,.ph{font-weight:600}
+
+/* rótulos em cor de destaque */
+.pill,.reel .pill,.dd .pill{background:none;border:0;padding:0;border-radius:0;color:var(--accent);font-weight:600;font-size:1.02rem;-webkit-backdrop-filter:none;backdrop-filter:none}
+.pill svg{color:inherit}
+.dd .pill,.dd .pill svg{color:var(--acc-l)}
+.eye-s{color:var(--accent);font-weight:600}
+.dd .eye-s,.dd-tools .eye-s,.ab3 .eye-s{color:var(--acc-l)}
+
+/* botões */
+.btn{background:var(--accent);color:var(--on);transition:background .2s,color .2s}
+.btn:hover{background:var(--ink);color:var(--bg)}
+.btn svg{transition:transform .2s}
+.btn:hover svg{transform:translateX(3px)}
+.btn.ghost{background:color-mix(in srgb,var(--accent) 9%,transparent);color:var(--accent);border:0}
+.btn.ghost:hover{background:color-mix(in srgb,var(--accent) 16%,transparent);color:var(--accent);border:0}
+.top .btn.sm{background:var(--accent);color:var(--on)}
+@media(prefers-reduced-motion:reduce){.btn svg{transition:none}}
+
+/* hero: malha de gradiente inclinada */
+#sh{display:none}
+.band.hero{isolation:isolate}
+.band.hero::before{content:"";display:block;position:absolute;z-index:-1;inset:0 0 auto 0;height:min(880px,60%);opacity:1;
+ background:
+  radial-gradient(34% 56% at 80% 12%,var(--g1) 0,transparent 70%),
+  radial-gradient(30% 52% at 98% 50%,var(--g2) 0,transparent 70%),
+  radial-gradient(36% 58% at 66% 58%,var(--g3) 0,transparent 72%),
+  radial-gradient(26% 46% at 90% 86%,var(--g4) 0,transparent 70%),
+  radial-gradient(46% 70% at 34% 18%,var(--g5) 0,transparent 72%),var(--bg);
+ background-size:135% 135%;background-position:60% 30%;
+ clip-path:polygon(0 0,100% 0,100% 54%,0 100%);
+ -webkit-mask-image:linear-gradient(98deg,rgba(0,0,0,.2) 0,rgba(0,0,0,.45) 40%,#000 72%);mask-image:linear-gradient(98deg,rgba(0,0,0,.2) 0,rgba(0,0,0,.45) 40%,#000 72%);
+ animation:mesh 18s ease-in-out infinite alternate}
+@keyframes mesh{to{background-position:20% 70%}}
+@media(prefers-reduced-motion:reduce){.band.hero::before{animation:none}}
+@media(max-width:700px){.band.hero::before{height:520px;clip-path:polygon(0 0,100% 0,100% 62%,0 100%)}}
+.band.hero .stats div{border-top-color:color-mix(in srgb,var(--ink) 18%,transparent)}
+.hc-stage,.reel .rstage{box-shadow:var(--sh)}
+.hc-win,.reel .browser,.reel .stage:hover .browser{border-radius:10px 10px 0 0}
+
+/* cabeçalho das páginas internas */
+.ph em,#p-cases .ph em{display:block;width:fit-content;max-width:100%;padding-bottom:.14em;background:linear-gradient(92deg,var(--g3),var(--g2) 58%,var(--g1));-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+
+/* seção escura com borda inclinada */
+section.dd,:root[data-theme="dark"] section.dd{background:var(--neu);border:0;--bg:var(--neu);--surface:#12304C;clip-path:polygon(0 5.5vw,100% 0,100% 100%,0 100%);padding-top:calc(128px + 5.5vw)}
+.dd h2,.dd-list h3{color:#F6F9FC}
+.dd-lead{color:#C4D0DC}.dd-list p{color:#A9B8C8}
+.dd-list li{border-color:rgba(255,255,255,.1);background:rgba(255,255,255,.05)}
+.dd-list li>svg{color:var(--acc-l)}
+@media(max-width:600px){section.dd,:root[data-theme="dark"] section.dd{padding-top:calc(80px + 5.5vw)}}
+
+/* cartões */
+.panel.go{background:var(--surface);box-shadow:var(--sh-sm);transition:transform .3s cubic-bezier(.2,.7,.2,1),box-shadow .3s}
+.panel.go svg.big{color:var(--accent)}
+.panel.go .arr{color:var(--muted);transition:transform .2s,color .2s}
+.panel.go:nth-child(n):hover{background:var(--surface);color:var(--ink);transform:translateY(-6px);box-shadow:var(--sh)}
+.panel.go:nth-child(n):hover p{color:var(--muted)}
+.panel.go:nth-child(n):hover .arr{color:var(--accent);transform:translate(3px,-3px)}
+@media(prefers-reduced-motion:reduce){.panel.go,.panel.go:nth-child(n):hover{transition:none;transform:none}}
+#p-competencias .panel{background:var(--surface);box-shadow:var(--sh-sm)}
+#p-competencias .panel h3 svg{color:var(--accent)}
+#p-competencias .chip{background:var(--fog)}
+.step li{background:var(--surface);box-shadow:var(--sh-sm)}
+.proc{border-top:2px solid var(--accent)}
+.aud-player{box-shadow:var(--sh)}
+.acc summary:hover{text-decoration-color:var(--accent)}
+.reel .openp{box-shadow:var(--sh-sm)}
+
+/* contato + rodapé */
+#p-contato .band{background:var(--neu);isolation:isolate}
+#p-contato .band::before{content:"";display:block;position:absolute;z-index:-1;inset:0;opacity:1;-webkit-mask-image:none;mask-image:none;
+ background:radial-gradient(34% 50% at 100% 30%,var(--g1) 0,transparent 70%),radial-gradient(40% 56% at 84% 74%,var(--g2) 0,transparent 70%),radial-gradient(44% 60% at 60% 104%,var(--g3) 0,transparent 72%);
+ clip-path:polygon(100% 6%,100% 100%,38% 100%)}
+#p-contato .btn{background:#fff;color:#0B2239}
+#p-contato .btn.ghost{background:rgba(255,255,255,.12);color:#fff;border:0}
+#p-contato .btn.ghost:hover{background:#fff;color:#0B2239}
+footer{background:var(--neu)}
+
+h2{max-width:18ch;text-wrap:balance}
+
+/* ===== v26: referência stripe.com atual — título + texto corrido, onda colorida, números em faixa ===== */
+.band.hero::before{display:none}
+#sh{display:block;inset:0 0 auto 0;height:min(900px,100%);-webkit-mask-image:linear-gradient(90deg,transparent 34%,#000 82%);mask-image:linear-gradient(90deg,transparent 34%,#000 82%)}
+.band.hero .center{grid-template-columns:minmax(0,1fr)}
+.band.hero .center>.hl{grid-column:1;max-width:min(100%,900px);margin:28px 0 0}
+.hl .ph,.hl .lead{display:inline;margin:0;max-width:none;font:600 clamp(1.9rem,3.5vw,3.1rem)/1.12 var(--display);letter-spacing:var(--track)!important;text-wrap:pretty}
+.hl .lead{font-weight:500;color:color-mix(in srgb,var(--ink) 50%,var(--bg))}
+.band.hero .center>.row{grid-column:1;margin-top:44px}
+.band.hero .center>.hc{grid-column:1;grid-row:4;margin-top:104px}
+.band.hero .center>.stats{grid-column:1;grid-row:5;align-self:auto;grid-template-columns:repeat(4,minmax(0,1fr));margin-top:80px}
+.band.hero .stats b{font-size:clamp(2.6rem,5vw,4.5rem)}
+@media(max-width:700px){
+ #sh{height:560px;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 80%);mask-image:linear-gradient(90deg,transparent 0,#000 80%);opacity:.55}
+ .band.hero .center>.hc{margin-top:56px}
+ .band.hero .center>.stats{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:48px}
+ .band.hero .center>.row{margin-top:32px}
+}
+section.dd,:root[data-theme="dark"] section.dd{clip-path:none;padding-top:144px}
+@media(max-width:600px){section.dd,:root[data-theme="dark"] section.dd{padding-top:96px}}
+#p-contato .band::before{clip-path:none;background:radial-gradient(30% 44% at 100% 100%,var(--g1) 0,transparent 70%),radial-gradient(36% 50% at 80% 112%,var(--g2) 0,transparent 70%),radial-gradient(40% 54% at 54% 120%,var(--g3) 0,transparent 72%)}
+.hl .ph::after{content:" "}
+
+/* marcas: logos menores */
+.strip .logo{--lh:18px}
+@media(max-width:700px){.strip .logo{--lh:16px}}
+
+/* ===== v27: header sólido no claro; vidro (transparência + blur gaussiano) só no escuro ===== */
+:root[data-theme="light"] .top .wrap{background:rgba(255,255,255,.55);-webkit-backdrop-filter:blur(18px) saturate(1.4);backdrop-filter:blur(18px) saturate(1.4);box-shadow:0 0 0 1px rgba(11,34,57,.07),0 12px 28px -14px rgba(11,34,57,.18),0 2px 5px -2px rgba(11,34,57,.08)}
+:root[data-theme="light"] .top .wrap::before,:root[data-theme="light"] .top .wrap::after{display:none}
+:root[data-theme="light"] .top .theme,:root[data-theme="light"] .top .burger,:root[data-theme="light"] .top .soc a,:root[data-theme="light"] .top .lang{background:transparent;box-shadow:none;border-color:rgba(11,34,57,.12)}
+:root[data-theme="light"] .top .theme:hover,:root[data-theme="light"] .top .burger:hover,:root[data-theme="light"] .top .soc a:hover{background:rgba(11,34,57,.06)}
+:root[data-theme="dark"] .top .wrap{background:rgba(10,25,41,.5);-webkit-backdrop-filter:blur(22px) saturate(1.3);backdrop-filter:blur(22px) saturate(1.3);box-shadow:0 20px 44px -18px rgba(0,0,0,.55)}
+:root[data-theme="dark"] .top .wrap::after{background:rgba(255,255,255,.1)}
+
+/* ===== v28: mistura com a Wise — títulos pesados em caixa alta, blocos de cor chapada, cantos grandes, sem sombras ===== */
+:root{--r-xl:36px;--r-lg:28px;--deep:#1A1460;--bright:#DFDBFF;--tint:color-mix(in srgb,var(--accent) 7%,var(--bg))}
+:root[data-theme="dark"]{--deep:#DFDBFF;--bright:#1D1769;--tint:color-mix(in srgb,var(--accent) 13%,var(--bg))}
+h2,.ph,.big,.fw{font-weight:800;text-transform:uppercase}
+h2,.reel .rh h2,.ab3 h2{font-size:clamp(2rem,4.7vw,4.1rem);line-height:.95;font-weight:800;max-width:17ch}
+.dd .dd-head>h2{font-size:clamp(2.1rem,5.2vw,4.6rem);font-weight:800;max-width:13ch}
+.ab3 h2{font-size:clamp(1.9rem,3.6vw,3.2rem);max-width:15ch}
+.faq h2{max-width:11ch}
+.ph{line-height:.86}
+.big{line-height:.9;max-width:12ch}
+.aud-t{text-transform:none;font-weight:600;line-height:1.05}
+.band.hero .stats b,.tl>li>h3{font-weight:700}
+.btn{padding:18px 30px;font-weight:600;font-size:1.05rem}
+.top .btn.sm{padding:11px 20px;font-size:.9rem}
+/* superfícies chapadas */
+.hc-stage,.reel .rstage,.aud-player,.reel .openp,.step li{box-shadow:none}
+.panel.go{background:var(--tint);box-shadow:none}
+.panel.go:nth-child(n):hover{background:var(--accent);color:var(--on);transform:none;box-shadow:none}
+.panel.go:nth-child(n):hover p{color:color-mix(in srgb,var(--on) 78%,transparent)}
+.panel.go:nth-child(n):hover svg.big,.panel.go:nth-child(n):hover .arr{color:var(--on)}
+.panel.go h3{font-weight:700}
+#p-competencias .panel{background:var(--tint);box-shadow:none}
+#p-competencias .panel h3{font-weight:700}
+#p-competencias .chip{background:var(--bg)}
+.dd-list li{border:0;background:rgba(255,255,255,.07)}
+.dd-list h3,.step h3{font-weight:700}
+/* bloco de cor: processo */
+section.alt{background:var(--bright);color:var(--deep);--ink:var(--deep);--muted:color-mix(in srgb,var(--deep) 72%,var(--bright));--surface:color-mix(in srgb,#fff 55%,var(--bright))}
+:root[data-theme="dark"] section.alt{--surface:color-mix(in srgb,#fff 10%,var(--bright))}
+section.alt .pill,section.alt .pill svg{color:var(--deep)}
+.proc{border-top:0;gap:16px}
+.step,.step+.step{border:0;padding:28px 28px 30px;border-radius:var(--r-lg);background:var(--surface)}
+.step::before{content:counter(st);display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--deep);color:var(--bright);font:700 1.7rem/1 var(--display);margin-bottom:72px}
+.step li{background:var(--bright)}
+@media(max-width:960px){.step:nth-child(n){border:0;margin-top:0;padding:28px}}
+@media(max-width:600px){.step::before{margin-bottom:40px}}
+@media(max-width:700px){:root{--r-xl:26px;--r-lg:22px}.btn{padding:16px 24px}}
+.fw{font-size:clamp(2.5rem,11.2vw,10.2rem);line-height:.86}
+
+/* ===== toggle de tema neumórfico: lua (escuro) / sol brilhante (claro) ===== */
+.nts{position:relative;flex:none;width:43px;height:24px;padding:0;border:0;border-radius:999px;cursor:pointer;-webkit-tap-highlight-color:transparent;transition:background .4s,box-shadow .4s}
+.nts-k{position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;transition:transform .4s cubic-bezier(.3,1.3,.5,1),background .4s,box-shadow .4s;overflow:hidden}
+.nts-k::after{content:"";position:absolute;top:0;left:7px;width:17px;height:17px;border-radius:50%;background:#1b1b1c;transition:opacity .3s,transform .4s}
+:root[data-theme="dark"] .nts{background:#171718;box-shadow:inset 3px 3px 7px rgba(0,0,0,.65),inset -2px -2px 5px rgba(255,255,255,.04),0 0 0 1px rgba(255,255,255,.04)}
+:root[data-theme="dark"] .nts-k{background:#fff;box-shadow:3px 3px 8px rgba(0,0,0,.6)}
+:root[data-theme="light"] .nts{background:linear-gradient(90deg,#fff 40%,#fffbd0);box-shadow:inset 0 0 0 1.5px #fff,inset 0 0 0 2px rgba(255,238,80,.55),0 0 14px rgba(255,238,80,.35),0 2px 8px rgba(11,34,57,.08)}
+:root[data-theme="light"] .nts-k{transform:translateX(19px);background:#FFF35C;box-shadow:0 0 9px 2px rgba(255,240,70,.75)}
+:root[data-theme="light"] .nts-k::after{opacity:0;transform:translateX(9px)}
+.nts:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+@media(max-width:760px){.nts{width:38px;height:22px}.nts-k{width:16px;height:16px}.nts-k::after{width:15px;height:15px;left:6px}:root[data-theme="light"] .nts-k{transform:translateX(16px)}}
+@media(prefers-reduced-motion:reduce){.nts,.nts-k,.nts-k::after{transition:none}}
 </style>
 </head>
 <body>
@@ -910,9 +1272,9 @@ section.ab3 .wrap{position:relative;z-index:2;width:100%}
 <header class="top"><div class="wrap">
   <a class="mark" href="#inicio" aria-label="João Arthur Vasconcellos, início"><svg class="jam" viewBox="18 19.5 438 328" aria-hidden="true" focusable="false"><path fill="currentColor" d="M156.5 19.5H222.5V238C222.5 305 182 347.5 118 347.5C72 347.5 36 324 18 300.5L59.5 255.5C73 275 92 288 116 288C140 288 156.5 271 156.5 240ZM222.5 19.5H288L456 347H389.5Z"/></svg></a>
   <nav aria-label="Principal">
-    <a href="#inicio"><i data-lucide="house"></i>Início</a><a href="#cases"><i data-lucide="layout-grid"></i>Cases</a><a href="#experiencia"><i data-lucide="briefcase"></i>Experiência</a><a href="#competencias"><i data-lucide="sparkles"></i>Competências</a><a href="#audio"><i data-lucide="music"></i>Áudio</a><a href="#contato"><i data-lucide="mail"></i>Contato</a>
+    <a href="#inicio"><i data-lucide="house"></i>Início</a><a href="#cases"><i data-lucide="layout-grid"></i>Cases</a><a href="#experiencia"><i data-lucide="briefcase"></i>Experiência</a><a href="#competencias"><i data-lucide="sparkles"></i>Competências</a><a href="#contato"><i data-lucide="mail"></i>Contato</a>
   </nav>
-  <div class="tools"><div class="soc"><a href="mailto:joaoarthur.design@gmail.com" aria-label="E-mail" title="E-mail"><i data-lucide="mail"></i></a><a href="https://wa.me/5514991261239" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg class="bico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a><a href="https://www.linkedin.com/in/jo%C3%A3o-arthur-de-oliveira-vasconcellos-a0ab2048/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="bico bico-li" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div><div class="lang" role="group" aria-label="Idioma"><button type="button" data-l="pt" aria-pressed="true" title="Português (Brasil)" aria-label="Português (Brasil)"><svg class="flag" viewBox="0 0 24 24" aria-hidden="true"><defs><clipPath id="fc-br"><circle cx="12" cy="12" r="12"/></clipPath></defs><g clip-path="url(#fc-br)"><rect width="24" height="24" fill="#009C3B"/><path d="M12 3.6 22 12 12 20.4 2 12z" fill="#FFDF00"/><circle cx="12" cy="12" r="4.6" fill="#002776"/><path d="M7.5 11.1c3.1-.9 6.4-.5 9.2 1.1l-.25.9c-2.7-1.5-5.8-1.9-8.75-1.1z" fill="#fff"/></g><circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(0,0,0,.12)"/></svg></button><button type="button" data-l="en" aria-pressed="false" title="English (US)" aria-label="English (US)"><svg class="flag" viewBox="0 0 24 24" aria-hidden="true"><defs><clipPath id="fc-us"><circle cx="12" cy="12" r="12"/></clipPath></defs><g clip-path="url(#fc-us)"><rect width="24" height="24" fill="#fff"/><g fill="#B22234"><rect y="0" width="24" height="1.85"/><rect y="3.7" width="24" height="1.85"/><rect y="7.4" width="24" height="1.85"/><rect y="11.1" width="24" height="1.85"/><rect y="14.8" width="24" height="1.85"/><rect y="18.5" width="24" height="1.85"/><rect y="22.2" width="24" height="1.85"/></g><rect width="11" height="12.95" fill="#3C3B6E"/><g fill="#fff"><circle cx="2.4" cy="2.6" r=".7"/><circle cx="5.5" cy="2.6" r=".7"/><circle cx="8.6" cy="2.6" r=".7"/><circle cx="4" cy="5.2" r=".7"/><circle cx="7.1" cy="5.2" r=".7"/><circle cx="2.4" cy="7.8" r=".7"/><circle cx="5.5" cy="7.8" r=".7"/><circle cx="8.6" cy="7.8" r=".7"/><circle cx="4" cy="10.4" r=".7"/><circle cx="7.1" cy="10.4" r=".7"/></g></g><circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(0,0,0,.12)"/></svg></button></div><div class="lang thm" id="theme" role="group" aria-label="Tema"><button type="button" data-t="light" aria-pressed="true" title="Tema claro" aria-label="Tema claro"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2" fill="currentColor"/><g stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2.6v1.6M12 19.8v1.6M2.6 12h1.6M19.8 12h1.6M5.4 5.4l1.1 1.1M17.5 17.5l1.1 1.1M5.4 18.6l1.1-1.1M17.5 6.5l1.1-1.1"/></g></svg></button><button type="button" data-t="dark" aria-pressed="false" title="Tema escuro" aria-label="Tema escuro"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.6 3.4a8.4 8.4 0 1 1-10.9 10.9A7 7 0 0 0 14.6 3.4z" fill="currentColor"/></svg></button></div><button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
+  <div class="tools"><div class="soc"><a href="mailto:joaoarthur.design@gmail.com" aria-label="E-mail" title="E-mail"><i data-lucide="mail"></i></a><a href="https://wa.me/5514991261239" target="_blank" rel="noopener" aria-label="WhatsApp" title="WhatsApp"><svg class="bico" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg></a><a href="https://www.linkedin.com/in/jo%C3%A3o-arthur-de-oliveira-vasconcellos-a0ab2048/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn"><svg class="bico bico-li" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a></div><div class="lang" role="group" aria-label="Idioma"><button type="button" data-l="pt" aria-pressed="true" title="Português (Brasil)" aria-label="Português (Brasil)"><svg class="flag" viewBox="0 0 24 24" aria-hidden="true"><defs><clipPath id="fc-br"><circle cx="12" cy="12" r="12"/></clipPath></defs><g clip-path="url(#fc-br)"><rect width="24" height="24" fill="#009C3B"/><path d="M12 3.6 22 12 12 20.4 2 12z" fill="#FFDF00"/><circle cx="12" cy="12" r="4.6" fill="#002776"/><path d="M7.5 11.1c3.1-.9 6.4-.5 9.2 1.1l-.25.9c-2.7-1.5-5.8-1.9-8.75-1.1z" fill="#fff"/></g><circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(0,0,0,.12)"/></svg></button><button type="button" data-l="en" aria-pressed="false" title="English (US)" aria-label="English (US)"><svg class="flag" viewBox="0 0 24 24" aria-hidden="true"><defs><clipPath id="fc-us"><circle cx="12" cy="12" r="12"/></clipPath></defs><g clip-path="url(#fc-us)"><rect width="24" height="24" fill="#fff"/><g fill="#B22234"><rect y="0" width="24" height="1.85"/><rect y="3.7" width="24" height="1.85"/><rect y="7.4" width="24" height="1.85"/><rect y="11.1" width="24" height="1.85"/><rect y="14.8" width="24" height="1.85"/><rect y="18.5" width="24" height="1.85"/><rect y="22.2" width="24" height="1.85"/></g><rect width="11" height="12.95" fill="#3C3B6E"/><g fill="#fff"><circle cx="2.4" cy="2.6" r=".7"/><circle cx="5.5" cy="2.6" r=".7"/><circle cx="8.6" cy="2.6" r=".7"/><circle cx="4" cy="5.2" r=".7"/><circle cx="7.1" cy="5.2" r=".7"/><circle cx="2.4" cy="7.8" r=".7"/><circle cx="5.5" cy="7.8" r=".7"/><circle cx="8.6" cy="7.8" r=".7"/><circle cx="4" cy="10.4" r=".7"/><circle cx="7.1" cy="10.4" r=".7"/></g></g><circle cx="12" cy="12" r="11.5" fill="none" stroke="rgba(0,0,0,.12)"/></svg></button></div><button class="nts" id="theme" type="button" role="switch" aria-checked="false" aria-label="Alternar tema claro/escuro" title="Alternar tema"><span class="nts-k"></span></button><button class="burger" id="burger" type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="drawer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h10" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></button></div>
 </div></header>
 <div class="dscrim" id="dscrim" hidden></div>
 <aside class="drawer" id="drawer" aria-label="Menu" aria-hidden="true" inert>
@@ -923,8 +1285,7 @@ section.ab3 .wrap{position:relative;z-index:2;width:100%}
     <a href="#cases"><span class="dn">02</span>Cases<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="#experiencia"><span class="dn">03</span>Experiência<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
     <a href="#competencias"><span class="dn">04</span>Competências<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="#audio"><span class="dn">05</span>Áudio<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    <a href="#contato"><span class="dn">06</span>Contato<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+    <a href="#contato"><span class="dn">05</span>Contato<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
   </nav>
   <div class="dfoot"><span class="deye">Fale comigo</span>
     <a href="mailto:joaoarthur.design@gmail.com">joaoarthur.design@gmail.com</a>
@@ -938,8 +1299,7 @@ section.ab3 .wrap{position:relative;z-index:2;width:100%}
 <div class="page" id="p-inicio">
   <div class="band hero"><canvas id="sh" aria-hidden="true"></canvas><div class="wrap center">
 <span class="pill"><i data-lucide="map-pin"></i>João Arthur Vasconcellos · Marília, SP</span>
-<h1 class="ph">Design de produto que faz o e-commerce <span class="mk">converter</span></h1>
-<p class="lead">Sou Product Designer e Lead UI/UX há mais de 15 anos. Desenho e escalo lojas para marcas como Acer, Mary Kay e Dengo, com design systems que aproximam design e engenharia.</p>
+<div class="hl"><h1 class="ph">Design de produto que faz o <span class="nb">e-commerce</span> <span class="mk">converter</span>.</h1> <p class="lead">Sou Product Designer e Lead UI/UX há mais de 15 anos. Desenho e escalo lojas para marcas como Acer, Mary Kay e Dengo, com design systems que aproximam design e engenharia.</p></div>
 <div class="row"><a class="btn" href="#cases">Ver cases<i data-lucide="arrow-right"></i></a><a class="btn ghost" href="#contato">Falar comigo</a></div>
 <div class="stats" role="list"><div role="listitem"><b>15+</b><span>anos em e-commerce</span></div><div role="listitem"><b>9</b><span>marcas nos cases</span></div><div role="listitem"><b>3</b><span>plataformas: VTEX, Nuvemshop e Tray</span></div><div role="listitem"><b>1</b><span>design system próprio, o turbostore</span></div></div>
 <div class="hc" role="region" aria-roledescription="carrossel" aria-label="Cases em destaque">
@@ -1027,7 +1387,7 @@ section.ab3 .wrap{position:relative;z-index:2;width:100%}
         <li>Layouts e estrutura inicial de páginas com foco em usabilidade.</li></ul></li>
     </ol></div>
   </section>
-  <section class="alt"><div class="word" data-x=".3" aria-hidden="true">b8one Admake Tray</div>
+  <section class="alt">
     <div class="wrap"><h2>Formação</h2><p>Bacharelado em Design Gráfico, UNIVEM (Centro Universitário Eurípides de Marília), concluído em 2009.</p></div></section>
 </div>
 
@@ -1043,31 +1403,6 @@ section.ab3 .wrap{position:relative;z-index:2;width:100%}
       <div class="panel"><h3><i data-lucide="shopping-bag"></i>E-commerce</h3><span class="chip">VTEX IO / FastStore</span><span class="chip">Nuvemshop</span><span class="chip">Tray</span><span class="chip">CRO</span></div>
       <div class="panel"><h3><i data-lucide="wrench"></i>Ferramentas</h3><span class="chip">Figma</span><span class="chip">Claude AI / GenAI</span><span class="chip">React</span><span class="chip">Next.js</span><span class="chip">Vue</span><span class="chip">Liquid</span><span class="chip">HTML/CSS</span></div>
     </div></section>
-</div>
-
-<!-- ÁUDIO -->
-<div class="page" id="p-audio">
-  <div class="band">
-    <div class="wrap"><h1 class="ph">Áudio<em>guitarra</em></h1><p class="lead">Fora do design, a guitarra. Algumas gravações minhas para ouvir enquanto navega.</p></div></div>
-  <section>
-    <div class="wrap"><div class="aud">
-      <div class="aud-main">
-        <div class="aud-player" data-id="wQxgmgWTz6c"><button class="aud-cover" type="button" aria-label="Reproduzir smooth major">
-          <img src="https://i.ytimg.com/vi/wQxgmgWTz6c/maxresdefault.jpg" alt="" onerror="if(!this.dataset.f){this.dataset.f=1;this.src=this.src.replace('maxresdefault','hqdefault')}else{this.style.visibility='hidden'}">
-          <span class="yt-play" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13l11-6.5z" fill="currentColor"/></svg></span></button></div>
-        <div class="aud-meta"><span class="eye-s">Em destaque</span><div class="aud-row"><div><h2 class="aud-t">smooth major</h2><p class="muted aud-m">Guitarra · strato 0.10 / sg 0.12</p></div>
-          <a class="trk-l aud-yt" href="https://www.youtube.com/watch?v=wQxgmgWTz6c" target="_blank" rel="noopener">YouTube<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a></div></div>
-      </div>
-      <div class="aud-side"><span class="eye-s">Faixas</span><ol class="aud-list"><li><button type="button" class="aud-it on" data-id="wQxgmgWTz6c" data-t="smooth major" data-m="Guitarra · strato 0.10 / sg 0.12" data-n="01" aria-current="true">
-        <span class="aud-th"><img src="https://i.ytimg.com/vi/wQxgmgWTz6c/mqdefault.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span class="aud-eq" aria-hidden="true"><i></i><i></i><i></i></span></span>
-        <span class="aud-tx"><span class="trk-n">01</span><b>smooth major</b><span class="muted">Guitarra · strato 0.10 / sg 0.12</span></span></button></li><li><button type="button" class="aud-it" data-id="g7mndVbahKE" data-t="lonelyplace" data-m="Guitarra · projeto autoral" data-n="02" aria-current="false">
-        <span class="aud-th"><img src="https://i.ytimg.com/vi/g7mndVbahKE/mqdefault.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span class="aud-eq" aria-hidden="true"><i></i><i></i><i></i></span></span>
-        <span class="aud-tx"><span class="trk-n">02</span><b>lonelyplace</b><span class="muted">Guitarra · projeto autoral</span></span></button></li><li><button type="button" class="aud-it" data-id="jxlZnhHM6wA" data-t="Faixa 03" data-m="Guitarra" data-n="03" aria-current="false">
-        <span class="aud-th"><img src="https://i.ytimg.com/vi/jxlZnhHM6wA/mqdefault.jpg" alt="" loading="lazy" onerror="this.style.visibility='hidden'"><span class="aud-eq" aria-hidden="true"><i></i><i></i><i></i></span></span>
-        <span class="aud-tx"><span class="trk-n">03</span><b>Faixa 03</b><span class="muted">Guitarra</span></span></button></li>
-      </ol></div>
-    </div></div>
-  </section>
 </div>
 
 <!-- CONTATO -->
@@ -1097,7 +1432,7 @@ section.ab3 .wrap{position:relative;z-index:2;width:100%}
     try{localStorage.setItem("jv-theme",n)}catch(e){}
   };
   /* páginas */
-  var pages=["inicio","cases","experiencia","competencias","audio","contato"];
+  var pages=["inicio","cases","experiencia","competencias","contato"];
   function route(){
     var h=location.hash.replace("#","");if(pages.indexOf(h)<0)h="inicio";
     pages.forEach(function(p){document.getElementById("p-"+p).classList.toggle("on",p===h)});
@@ -1231,9 +1566,9 @@ void main(){
     acc+=(1.-smoothstep(px*.5,px*1.7,d))*(.3+.7*env);
     gl+=exp(-d*d*700.)*env;
   }
-  float hx=smoothstep(0.,.2,uv.x)*smoothstep(1.,.8,uv.x);
-  vec3 c=L;
-  float a=clamp(acc*.22+gl*.012,0.,1.)*hx;
+  float hx=smoothstep(0.,.2,uv.x);
+  vec3 c=mix(mix(vec3(.353,.31,.953),vec3(.878,.153,.494),smoothstep(.3,.62,uv.x)),vec3(1.,.478,.239),smoothstep(.6,.95,uv.x));
+  float a=clamp(acc*.6+gl*.035,0.,1.)*hx;
   o=vec4(c*a,a);
 }`;
     function sh(t,s){var x=gl.createShader(t);gl.shaderSource(x,s.trim());gl.compileShader(x);return x}
@@ -1271,7 +1606,7 @@ void main(){
 </script>
 <script>
 (function(){
-  var EN={"Foto de João Arthur Vasconcellos":"Photo of João Arthur Vasconcellos","Prazer, sou o João": "Nice to meet you, I’m João", "Design de produto com estratégia e olhar de": "Product design with strategy and a sharp eye for", "negócio": "business", "Há mais de 15 anos desenho e escalo lojas para marcas como Acer, Mary Kay e Dengo. Hoje lidero o time de UI/UX na b8one, unindo pesquisa, dados e design systems.": "For 15+ years, I’ve designed and scaled online stores for brands like Acer, Mary Kay, and Dengo. Today I lead the UI/UX team at b8one, bringing together research, data, and design systems.", "Marília, SP · Brasil": "Marília, SP · Brazil", "Ver meus cases": "See my work","Ferramentas que uso":"Tools I use","Design orientado a dados e": "Data- and results-driven", "resultados": "design", "Conecto dados comportamentais, métricas de negócio e pesquisa com usuários para embasar decisões de produto e mitigar riscos antes de cada lançamento.": "I connect behavioral data, business metrics, and user research to ground product decisions and reduce risk before every launch.", "Mapeamento de padrões em escala para priorizar oportunidades de alto impacto e identificar gargalos na jornada.": "Mapping patterns at scale to prioritize high-impact opportunities and pinpoint bottlenecks in the journey.", "Investigação profunda de contexto e motivações para descobrir as dores por trás dos comportamentos de compra e uso.": "In-depth investigation of context and motivations to uncover the pain points behind buying and usage behavior.", "Validação contínua de hipóteses com usuários reais para maximizar taxas de conversão antes de investir em desenvolvimento em larga escala.": "Continuous validation of hypotheses with real users to maximize conversion rates before investing in large-scale development.", "Escuta ativa e testes de usabilidade para alinhar os fluxos de interface às necessidades reais do cliente final.": "Active listening and usability testing to align interface flows with the real needs of end customers.", "Acompanhamento de KPIs pós-lançamento (ex.: conversão, engajamento e retenção) para garantir melhoria contínua e aprendizado iterativo.": "Tracking post-launch KPIs (e.g., conversion, engagement, and retention) to drive continuous improvement and iterative learning.","Pesquisa e dados": "Research and data", "Decisões guiadas por": "Decisions driven by", "dados": "data", "Tomo decisões baseadas em dados a fim de garantir o sucesso esperado de cada produto e projeto.": "I make data-driven decisions to make sure every product and project delivers the expected results.", "Por trás de cada case": "Behind every case study", "Decisões orientadas por dados": "Data-driven decisions", "Pesquisa quantitativa": "Quantitative research", "Dados em escala para medir comportamento e priorizar o que mais impacta a jornada.": "Data at scale to measure behavior and prioritize what most affects the journey.", "Pesquisa qualitativa": "Qualitative research", "Entender o porquê por trás dos números e das escolhas de quem compra.": "Understanding the why behind the numbers and behind shoppers’ choices.", "Testes A/B": "A/B testing", "Validar hipóteses com usuários reais antes de escalar uma mudança.": "Validating hypotheses with real users before rolling out a change.", "Entrevistas com usuários": "User interviews", "Ouvir quem usa o produto para desenhar a partir de necessidades reais.": "Listening to the people who use the product to design from real needs.", "Análise de métricas": "Metrics analysis", "Acompanhar indicadores com o objetivo de impulsionar fluxos e produtos.": "Tracking key metrics to boost flows and products.","Tema":"Theme","Tema claro":"Light theme","Tema escuro":"Dark theme","Migração da VTEX Legacy para FastStore com um redesign dedicado, guiado pela análise da jornada do usuário com mapas de calor e gravações de navegação.": "Migration from VTEX Legacy to FastStore with a dedicated redesign, guided by user journey analysis using heatmaps and session recordings.", "Um dos primeiros clientes: fizemos o primeiro desenvolvimento em VTEX IO em 2020. Desde então, seguimos com suporte e evolução contínua, passando por um redesign e pela construção de uma loja B2B dedicada.": "One of our first clients: we built our first VTEX IO store for them in 2020. Since then, we’ve provided ongoing support and evolution, including a redesign and a dedicated B2B store.", "Transformar a experiência da marca no digital. O coração da Mary Kay sempre foram as consultoras, então criamos um fluxo de vinculação de consultora por região.": "Bring the brand experience into the digital world. Mary Kay’s core has always been its independent beauty consultants, so we created a flow that connects shoppers with a consultant in their region.", "Reposicionamento da marca no mercado brasileiro.": "Repositioning the brand in the Brazilian market.", "Migração para FastStore customizado, com um fluxo de comparação de produtos sob medida e diversas melhorias de usabilidade seguindo as diretrizes WCAG.": "Migration to a custom FastStore build, with a tailored product comparison flow and many usability improvements following WCAG guidelines.", "Migração para FastStore customizado, aplicando as melhores práticas de interação e navegação.": "Migration to a custom FastStore build, applying best practices in interaction and navigation.", "Migração para a plataforma Wake usando um design system criado dentro da b8one.": "Migration to the Wake platform using a design system built in-house at b8one.", "Nove operações de e-commerce em que atuei como Líder de UI Design. Para cada uma: o desafio e o que eu fiz.": "Nine e-commerce businesses where I was the UI Design Lead. For each one: the challenge and what I did.", "Em destaque": "Featured", "Faixas": "Tracks","Áudio":"Audio","guitarra":"guitar","Fora do design, a guitarra. Algumas gravações minhas para ouvir enquanto navega.":"Outside of design, there’s the guitar. A few of my recordings to listen to while you browse.","Guitarra · strato 0.10 / sg 0.12":"Guitar · strato 0.10 / sg 0.12","Guitarra · projeto autoral":"Guitar · original project","Guitarra":"Guitar","Faixa 03":"Track 03","Reproduzir smooth major":"Play smooth major","Reproduzir lonelyplace":"Play lonelyplace","Reproduzir Faixa 03":"Play Track 03","Cases em destaque":"Featured case studies","carrossel":"carousel","João Arthur Vasconcellos, início":"João Arthur Vasconcellos, home","Deslize para trocar de case. Toque no mockup para ver a página completa.":"Swipe to switch case studies. Tap the mockup to see the full page.","Navegação dos cases":"Case study navigation","Abrir menu":"Open menu","Fechar menu":"Close menu","Fale comigo":"Get in touch","Fale comigo no WhatsApp":"Chat with me on WhatsApp","Pular para o conteúdo": "Skip to content", "Novo: 9 cases de e-commerce com mockups de desktop e mobile.": "New: 9 e-commerce case studies with desktop and mobile mockups.", "Ver cases →": "See the work →", "Início": "Home", "Experiência": "Experience", "Competências": "Skills", "Contato": "Contact", "Principal": "Main", "Rodapé": "Footer", "Alternar tema claro e escuro": "Toggle light and dark theme", "E-mail": "Email", "João Arthur Vasconcellos · Marília, SP": "João Arthur Vasconcellos · Marília, Brazil", "Design de produto que faz o e-commerce": "Product design that makes e-commerce", "converter": "convert", "Sou Product Designer e Lead UI/UX há mais de 15 anos. Desenho e escalo lojas para marcas como Acer, Mary Kay e Dengo, com design systems que aproximam design e engenharia.": "I’m a Product Designer and UI/UX Lead with 15+ years of experience. I design and scale online stores for brands like Acer, Mary Kay, and Dengo, with design systems that bring design and engineering closer together.", "Ver cases": "See the work", "Falar comigo": "Get in touch", "anos em e-commerce": "years in e-commerce", "marcas nos cases": "brands in my case studies", "plataformas: VTEX, Nuvemshop e Tray": "platforms: VTEX, Nuvemshop, and Tray", "design system próprio, o turbostore": "design system built in-house: turbostore", "Marcas em que já atuei": "Brands I’ve worked with", "Cases selecionados": "Selected work", "Interfaces que liderei para grandes marcas": "Interfaces I led for major brands", "Ver todos os cases": "See all case studies", "Escolha um case": "Choose a case study", "Chocolates": "Chocolate", "Tecnologia e gaming": "Tech and gaming", "Beleza": "Beauty", "Eletrodomésticos": "Home appliances", "Áudio e eletrônicos": "Audio and electronics", "Limpeza e casa": "Cleaning and home", "Materiais de construção": "Home improvement", "Utensílios de cozinha": "Cookware", "Moda": "Fashion", "Abrir protótipo": "Open prototype", "Passe o mouse sobre o mockup e escolha um projeto na lista.": "Hover over the mockup and pick a project from the list.", "Como eu trabalho": "How I work", "Do objetivo de negócio ao pixel no ar": "From business goal to live pixel", "Um processo simples que repito em cada projeto, pensado para conversão e para o time de front-end receber tudo pronto.": "A simple process I repeat on every project, built for conversion and for a front-end team that gets everything ready to build.", "Entender": "Understand", "Objetivos de negócio, dados da loja e jornada atual. Onde o cliente trava e o que precisa vender.": "Business goals, store data, and the current journey. Where shoppers get stuck and what needs to sell.", "Desenhar": "Craft", "Interfaces de alta fidelidade, desktop e mobile, validadas em protótipo antes de ir para o código.": "High-fidelity desktop and mobile interfaces, validated in prototypes before any code is written.", "Protótipos": "Prototyping", "Testes de usabilidade": "Usability testing", "Sistematizar": "Systematize", "Cada decisão vira token e componente reutilizável, para a próxima loja sair mais rápido e mais consistente.": "Every decision becomes a reusable token or component, so the next store ships faster and more consistently.", "Componentes": "Components", "Entregar junto": "Ship together", "Parceria próxima com devs, acompanhamento no Jira e revisão de fidelidade visual até a publicação.": "Close partnership with developers, Jira tracking, and visual QA all the way to launch.", "QA visual": "Visual QA", "Continue explorando": "Keep exploring", "Dengo, Acer, Mary Kay, Mondial, Aiwa, Wap, Balaroti, Brinox e Ellus.": "Dengo, Acer, Mary Kay, Mondial, Aiwa, Wap, Balaroti, Brinox, and Ellus.", "Um playground onde você altera os tokens e vê tudo mudar.": "A playground where you change the tokens and watch everything update.", "b8one, Admake e Tray: 15 anos de e-commerce.": "b8one, Admake, and Tray: 15 years in e-commerce.", "Produto, sistemas, liderança e ferramentas.": "Product, systems, leadership, and tools.", "Perguntas frequentes": "FAQ", "Respostas rápidas sobre minha trajetória e jeito de trabalhar.": "Quick answers about my background and how I work.", "Qual é a sua experiência com e-commerce?": "What’s your e-commerce experience?", "Mais de 15 anos. Comecei na Tray Ecommerce em 2010, passei pela Admake entre 2012 e 2020 e, desde 2020, atuo na b8one. Trabalho com VTEX (IO e FastStore), Nuvemshop e Tray, sempre com foco em conversão.": "15+ years. I started at Tray Ecommerce in 2010, worked at Admake from 2012 to 2020, and have been at b8one since 2020. I work with VTEX (IO and FastStore), Nuvemshop, and Tray, always with a focus on conversion.", "Com quais marcas você já trabalhou?": "Which brands have you worked with?", "Na b8one, dei direção visual e de experiência para Acer, Mary Kay, Dengo, Mondial, Balaroti e Ellus. Nos cases desta página, incluindo Aiwa, Wap e Brinox, atuei como Líder de UI Design.": "At b8one, I led visual and UX direction for Acer, Mary Kay, Dengo, Mondial, Balaroti, and Ellus. On every case study here, including Aiwa, Wap, and Brinox, I was the UI Design Lead.", "Como você trabalha com design systems?": "How do you work with design systems?", "Estruturei o design system turbostore/b8one, com tokens de cor, tipografia, espaçamento e ícones e uma biblioteca de componentes reutilizáveis. Os tokens são mapeados em JSON e documentados em um portal MDX/Nextra, o que aproxima design e engenharia.": "I built the turbostore/b8one design system, with color, typography, spacing, and icon tokens plus a reusable component library. Tokens are mapped to JSON and documented in an MDX/Nextra portal, which brings design and engineering closer together.", "Como é a sua atuação como líder de design?": "What does your design leadership look like?", "Faço mentoria do time de UI/UX, estruturo rituais e padronização de processos, defino OKRs de design focados em escala de conhecimento e acompanho entregas e fluxos no Jira.": "I mentor the UI/UX team, set up design rituals and standard processes, define design OKRs focused on scaling team knowledge, and track delivery and workflows in Jira.", "Você também trabalha com front-end?": "Do you also work with front-end code?", "Tenho noções de React, Next.js, Vue, Liquid e HTML/CSS. Isso me ajuda a escrever especificações claras para o front e a manter a fidelidade visual junto com os desenvolvedores.": "I have working knowledge of React, Next.js, Vue, Liquid, and HTML/CSS. It helps me write clear specs and keep the build true to the design alongside developers.", "Como posso falar com você?": "How can I reach you?", "Pela página de contato: e-mail, LinkedIn ou WhatsApp. Me conte o desafio do seu produto e eu respondo.": "Through the contact page: email, LinkedIn, or WhatsApp. Tell me about your product challenge and I’ll get back to you.", "Nove operações de e-commerce em que atuei como Líder de UI Design. Para cada uma: o desafio e o que eu fiz.": "Nine e-commerce businesses where I was the UI Design Lead. For each one: the challenge, what I did, and the result.", "Portfólio · 09 projetos": "Portfolio · 09 projects", "Do hero ao rodapé, em desktop e mobile": "From hero to footer, on desktop and mobile", "Segmento": "Industry", "Papel": "Role", "Líder de UI Design": "UI Design Lead", "Dispositivos": "Devices", "Desktop e mobile": "Desktop and mobile", "Entrega": "Deliverable", "Interface da home": "Homepage design", "Desafio": "Challenge", "O que eu fiz": "What I did", "Resultado": "Result", "[preencher]": "[add metric]", "Métrica principal, ex.: +X% de conversão no mobile ou −Y% de rejeição na home.": "Key metric, e.g. +X% mobile conversion or −Y% homepage bounce rate.", "Selecione um projeto na lista. Clique no mockup para ver a página completa.": "Pick a project from the list. Click the mockup to see the full page.", "Home com foco em descoberta de produto e presentes, banners editoriais e benefícios de entrega em destaque.": "Homepage focused on product discovery and gifting, with editorial banners and shipping perks up front.", "Transformar a home em vitrine de presentes e de descoberta, sem perder a sensação premium da marca.": "Turn the homepage into a gift and discovery showcase without losing the brand’s premium feel.", "Interface para lançamentos de notebooks gamer, com barra de benefícios e navegação por categorias.": "Interface for gaming laptop launches, with a benefits bar and category navigation.", "Apresentar lançamentos gamer e um catálogo técnico extenso sem sobrecarregar quem chega na home.": "Showcase new gaming launches and a large technical catalog without overwhelming homepage visitors.", "Home com vitrines de categorias, campanhas de lançamento e atalhos de promoção.": "Homepage with category shelves, launch campaigns, and promo shortcuts.", "Equilibrar campanhas de lançamento e promoções com uma navegação clara por categorias de beleza.": "Balance launch campaigns and promotions with clear navigation across beauty categories.", "Navegação por departamentos e categorias, com cards claros e vitrines para um catálogo amplo.": "Department and category navigation, with clean cards and shelves for a large catalog.", "Organizar um catálogo amplo de eletrodomésticos para o cliente achar o produto certo em poucos cliques.": "Organize a large appliance catalog so shoppers find the right product in just a few clicks.", "Loja de áudio com navegação por categorias, ofertas em destaque e banners de produto.": "Audio store with category navigation, featured deals, and product banners.", "Dar destaque a ofertas e lançamentos de áudio mantendo a navegação por categoria simples.": "Highlight audio deals and new releases while keeping category navigation simple.", "Soluções por ambiente, vitrines de produtos e blocos de ajuda e assistência técnica.": "Shop-by-room solutions, product shelves, and help and repair service blocks.", "Vender pelo uso, não só pelo produto, e ainda dar acesso fácil a ajuda e assistência técnica.": "Sell by use case, not just by product, and give easy access to help and repair service.", "Home de materiais de construção e casa, com ofertas, categorias em destaque e vitrines por seção.": "Home improvement homepage with deals, featured categories, and section-based shelves.", "Trazer clareza a um varejo de construção e casa, com muitas categorias e ofertas disputando atenção.": "Bring clarity to a home improvement retailer with many categories and deals competing for attention.", "Vitrines por tipo de panela, ofertas por tempo limitado e navegação por ambiente.": "Shelves by cookware type, limited-time deals, and shop-by-room navigation.", "Ajudar o cliente a escolher entre muitos tipos de panela e aproveitar ofertas com prazo.": "Help shoppers choose among many types of cookware and act on limited-time deals.", "Experiência de moda com hero em tela cheia, navegação enxuta e campanhas sazonais.": "Fashion experience with a full-screen hero, streamlined navigation, and seasonal campaigns.", "Traduzir o posicionamento de moda da marca em uma loja enxuta, guiada por campanhas sazonais.": "Translate the brand’s fashion positioning into a lean store driven by seasonal campaigns.", "Galeria de protótipos": "Prototype gallery", "Dispositivo": "Device", "Tamanho real": "Actual size", "Alternar tamanho real": "Toggle actual size", "Case anterior": "Previous case study", "Próximo case": "Next case study", "Fechar galeria": "Close gallery", "Fechar": "Close", "Role para ver a página inteira": "Scroll to see the full page", "Cada decisão aqui é um token. Troque a cor, o raio e o espaçamento da tipografia: o site inteiro responde e o JSON mostra o que o front-end receberia.": "Every decision here is a token. Change the color, corner radius, and heading spacing: the whole site responds, and the JSON shows what the front-end would receive.", "Cor da marca": "Brand color", "Raio dos cantos": "Corner radius", "Espaçamento do título": "Heading letter spacing", "Os mesmos tokens aplicados a elementos de uma loja.": "The same tokens applied to store components.", "Comprar agora": "Buy now", "Ver detalhes": "View details", "Notebook Acer Aspire": "Acer Aspire laptop", "12x sem juros": "Pay in 12 interest-free installments", "Frete grátis": "Free shipping", "Kit skincare": "Skincare set", "A partir de R$ 129": "From R$ 129", "Mais vendido": "Best seller", "Índigo": "Indigo", "Roxo": "Purple", "Grafite": "Graphite", "Vinho": "Wine", "Verde": "Green", "Tokens Componentes Layouts Ícones": "Tokens Components Layouts Icons", "Da especificação ao código": "From spec to code", "Na b8one, estruturei o design system turbostore/b8one com tokens de cor, tipografia, espaçamento e ícones. Os tokens são mapeados em JSON e publicados em um portal de documentação MDX/Nextra, a ponte entre design e engenharia.": "At b8one, I built the turbostore/b8one design system with color, typography, spacing, and icon tokens. Tokens are mapped to JSON and published in an MDX/Nextra documentation portal, the bridge between design and engineering.", "15+ anos": "15+ years", "Da criação de temas na Tray à liderança de design na b8one.": "From building store themes at Tray to leading design at b8one.", "2020 – Presente": "2020 – Present", "Senior & Lead UI/UX Designer": "Senior UI/UX Designer & Design Lead", "Liderança:": "Leadership:", "mentoria do time de UI/UX, rituais de design, padronização de processos e OKRs focados em escala de conhecimento.": "mentor the UI/UX team, run design rituals, standardize processes, and set OKRs focused on scaling team knowledge.", "arquitetura do turbostore/b8one com tokens e biblioteca de componentes reutilizáveis.": "architected turbostore/b8one with design tokens and a reusable component library.", "Design + Engenharia:": "Design + Engineering:", "tokens em JSON e documentação em MDX/Nextra.": "tokens in JSON and documentation in MDX/Nextra.", "Grandes cases:": "Key accounts:", "Acer, Mary Kay, Dengo, Mondial, Balaroti e Ellus.": "Acer, Mary Kay, Dengo, Mondial, Balaroti, and Ellus.", "UI Designer Pleno": "UI Designer", "Interfaces web e mobile com foco em e-commerce e conversão.": "Designed web and mobile interfaces for e-commerce, focused on conversion.", "Layouts customizados, componentes e protótipos de alta fidelidade para lojas em várias plataformas.": "Created custom layouts, components, and high-fidelity prototypes for stores across multiple platforms.", "Parceria com devs front-end para garantir fidelidade visual.": "Partnered with front-end developers to make sure the build matched the design.", "Banners, peças digitais e temas para lojas virtuais na plataforma Tray.": "Designed banners, digital assets, and storefront themes on the Tray platform.", "Layouts e estrutura inicial de páginas com foco em usabilidade.": "Built page layouts and early page structure with a focus on usability.", "Formação": "Education", "Bacharelado em Design Gráfico, UNIVEM (Centro Universitário Eurípides de Marília), concluído em 2009.": "Bachelor’s Degree in Graphic Design, UNIVEM (Eurípides University Center of Marília, Brazil), 2009.", "O que": "What", "eu faço": "I do", "Estratégia de produto, execução visual e sistemas que escalam, do primeiro wireframe ao handoff para o front.": "Product strategy, visual design, and systems that scale, from the first wireframe to front-end handoff.", "Produto e UX": "Product and UX", "Acessibilidade": "Accessibility", "Specs para front": "Dev specs", "Liderança": "Leadership", "Mentoria": "Mentoring", "OKRs de design": "Design OKRs", "Gestão de entregas": "Delivery management", "Ferramentas": "Tools", "Tem um produto para evoluir?": "Have a product that needs to level up?", "Me conte o desafio. Respondo por e-mail ou WhatsApp.": "Tell me about the challenge. I reply by email or WhatsApp.", "© 2026 João Arthur de Oliveira Vasconcellos · Marília, SP": "© 2026 João Arthur de Oliveira Vasconcellos · Marília, Brazil", "Idioma": "Language"};
+  var EN={"Foto de João Arthur Vasconcellos":"Photo of João Arthur Vasconcellos","Prazer, sou o João": "Nice to meet you, I’m João", "Design de produto com estratégia e olhar de": "Product design with strategy and a sharp eye for", "negócio": "business", "Há mais de 15 anos desenho e escalo lojas para marcas como Acer, Mary Kay e Dengo. Hoje lidero o time de UI/UX na b8one, unindo pesquisa, dados e design systems.": "For 15+ years, I’ve designed and scaled online stores for brands like Acer, Mary Kay, and Dengo. Today I lead the UI/UX team at b8one, bringing together research, data, and design systems.", "Marília, SP · Brasil": "Marília, SP · Brazil", "Ver meus cases": "See my work","Ferramentas que uso":"Tools I use","Design orientado a dados e": "Data- and results-driven", "resultados": "design", "Conecto dados comportamentais, métricas de negócio e pesquisa com usuários para embasar decisões de produto e mitigar riscos antes de cada lançamento.": "I connect behavioral data, business metrics, and user research to ground product decisions and reduce risk before every launch.", "Mapeamento de padrões em escala para priorizar oportunidades de alto impacto e identificar gargalos na jornada.": "Mapping patterns at scale to prioritize high-impact opportunities and pinpoint bottlenecks in the journey.", "Investigação profunda de contexto e motivações para descobrir as dores por trás dos comportamentos de compra e uso.": "In-depth investigation of context and motivations to uncover the pain points behind buying and usage behavior.", "Validação contínua de hipóteses com usuários reais para maximizar taxas de conversão antes de investir em desenvolvimento em larga escala.": "Continuous validation of hypotheses with real users to maximize conversion rates before investing in large-scale development.", "Escuta ativa e testes de usabilidade para alinhar os fluxos de interface às necessidades reais do cliente final.": "Active listening and usability testing to align interface flows with the real needs of end customers.", "Acompanhamento de KPIs pós-lançamento (ex.: conversão, engajamento e retenção) para garantir melhoria contínua e aprendizado iterativo.": "Tracking post-launch KPIs (e.g., conversion, engagement, and retention) to drive continuous improvement and iterative learning.","Pesquisa e dados": "Research and data", "Decisões guiadas por": "Decisions driven by", "dados": "data", "Tomo decisões baseadas em dados a fim de garantir o sucesso esperado de cada produto e projeto.": "I make data-driven decisions to make sure every product and project delivers the expected results.", "Por trás de cada case": "Behind every case study", "Decisões orientadas por dados": "Data-driven decisions", "Pesquisa quantitativa": "Quantitative research", "Dados em escala para medir comportamento e priorizar o que mais impacta a jornada.": "Data at scale to measure behavior and prioritize what most affects the journey.", "Pesquisa qualitativa": "Qualitative research", "Entender o porquê por trás dos números e das escolhas de quem compra.": "Understanding the why behind the numbers and behind shoppers’ choices.", "Testes A/B": "A/B testing", "Validar hipóteses com usuários reais antes de escalar uma mudança.": "Validating hypotheses with real users before rolling out a change.", "Entrevistas com usuários": "User interviews", "Ouvir quem usa o produto para desenhar a partir de necessidades reais.": "Listening to the people who use the product to design from real needs.", "Análise de métricas": "Metrics analysis", "Acompanhar indicadores com o objetivo de impulsionar fluxos e produtos.": "Tracking key metrics to boost flows and products.","Tema":"Theme","Tema claro":"Light theme","Tema escuro":"Dark theme","Migração da VTEX Legacy para FastStore com um redesign dedicado, guiado pela análise da jornada do usuário com mapas de calor e gravações de navegação.": "Migration from VTEX Legacy to FastStore with a dedicated redesign, guided by user journey analysis using heatmaps and session recordings.", "Um dos primeiros clientes: fizemos o primeiro desenvolvimento em VTEX IO em 2020. Desde então, seguimos com suporte e evolução contínua, passando por um redesign e pela construção de uma loja B2B dedicada.": "One of our first clients: we built our first VTEX IO store for them in 2020. Since then, we’ve provided ongoing support and evolution, including a redesign and a dedicated B2B store.", "Transformar a experiência da marca no digital. O coração da Mary Kay sempre foram as consultoras, então criamos um fluxo de vinculação de consultora por região.": "Bring the brand experience into the digital world. Mary Kay’s core has always been its independent beauty consultants, so we created a flow that connects shoppers with a consultant in their region.", "Reposicionamento da marca no mercado brasileiro.": "Repositioning the brand in the Brazilian market.", "Migração para FastStore customizado, com um fluxo de comparação de produtos sob medida e diversas melhorias de usabilidade seguindo as diretrizes WCAG.": "Migration to a custom FastStore build, with a tailored product comparison flow and many usability improvements following WCAG guidelines.", "Migração para FastStore customizado, aplicando as melhores práticas de interação e navegação.": "Migration to a custom FastStore build, applying best practices in interaction and navigation.", "Migração para a plataforma Wake usando um design system criado dentro da b8one.": "Migration to the Wake platform using a design system built in-house at b8one.", "Nove operações de e-commerce em que atuei como Líder de UI Design. Para cada uma: o desafio e o que eu fiz.": "Nine e-commerce businesses where I was the UI Design Lead. For each one: the challenge and what I did.", "Em destaque": "Featured", "Faixas": "Tracks","Áudio":"Audio","guitarra":"guitar","Fora do design, a guitarra. Algumas gravações minhas para ouvir enquanto navega.":"Outside of design, there’s the guitar. A few of my recordings to listen to while you browse.","Guitarra · strato 0.10 / sg 0.12":"Guitar · strato 0.10 / sg 0.12","Guitarra · projeto autoral":"Guitar · original project","Guitarra":"Guitar","Faixa 03":"Track 03","Reproduzir smooth major":"Play smooth major","Reproduzir lonelyplace":"Play lonelyplace","Reproduzir Faixa 03":"Play Track 03","Cases em destaque":"Featured case studies","carrossel":"carousel","João Arthur Vasconcellos, início":"João Arthur Vasconcellos, home","Deslize para trocar de case. Toque no mockup para ver a página completa.":"Swipe to switch case studies. Tap the mockup to see the full page.","Navegação dos cases":"Case study navigation","Abrir menu":"Open menu","Fechar menu":"Close menu","Fale comigo":"Get in touch","Fale comigo no WhatsApp":"Chat with me on WhatsApp","Pular para o conteúdo": "Skip to content", "Novo: 9 cases de e-commerce com mockups de desktop e mobile.": "New: 9 e-commerce case studies with desktop and mobile mockups.", "Ver cases →": "See the work →", "Início": "Home", "Experiência": "Experience", "Competências": "Skills", "Contato": "Contact", "Principal": "Main", "Rodapé": "Footer", "Alternar tema claro e escuro": "Toggle light and dark theme", "E-mail": "Email", "João Arthur Vasconcellos · Marília, SP": "João Arthur Vasconcellos · Marília, Brazil", "Design de produto que faz o": "Product design that makes", "Design de produto que faz o e-commerce": "Product design that makes e-commerce", "converter": "convert", "Sou Product Designer e Lead UI/UX há mais de 15 anos. Desenho e escalo lojas para marcas como Acer, Mary Kay e Dengo, com design systems que aproximam design e engenharia.": "I’m a Product Designer and UI/UX Lead with 15+ years of experience. I design and scale online stores for brands like Acer, Mary Kay, and Dengo, with design systems that bring design and engineering closer together.", "Ver cases": "See the work", "Falar comigo": "Get in touch", "anos em e-commerce": "years in e-commerce", "marcas nos cases": "brands in my case studies", "plataformas: VTEX, Nuvemshop e Tray": "platforms: VTEX, Nuvemshop, and Tray", "design system próprio, o turbostore": "design system built in-house: turbostore", "Marcas em que já atuei": "Brands I’ve worked with", "Cases selecionados": "Selected work", "Interfaces que liderei para grandes marcas": "Interfaces I led for major brands", "Ver todos os cases": "See all case studies", "Escolha um case": "Choose a case study", "Chocolates": "Chocolate", "Tecnologia e gaming": "Tech and gaming", "Beleza": "Beauty", "Eletrodomésticos": "Home appliances", "Áudio e eletrônicos": "Audio and electronics", "Limpeza e casa": "Cleaning and home", "Materiais de construção": "Home improvement", "Utensílios de cozinha": "Cookware", "Moda": "Fashion", "Abrir protótipo": "Open prototype", "Passe o mouse sobre o mockup e escolha um projeto na lista.": "Hover over the mockup and pick a project from the list.", "Como eu trabalho": "How I work", "Do objetivo de negócio ao pixel no ar": "From business goal to live pixel", "Um processo simples que repito em cada projeto, pensado para conversão e para o time de front-end receber tudo pronto.": "A simple process I repeat on every project, built for conversion and for a front-end team that gets everything ready to build.", "Entender": "Understand", "Objetivos de negócio, dados da loja e jornada atual. Onde o cliente trava e o que precisa vender.": "Business goals, store data, and the current journey. Where shoppers get stuck and what needs to sell.", "Desenhar": "Craft", "Interfaces de alta fidelidade, desktop e mobile, validadas em protótipo antes de ir para o código.": "High-fidelity desktop and mobile interfaces, validated in prototypes before any code is written.", "Protótipos": "Prototyping", "Testes de usabilidade": "Usability testing", "Sistematizar": "Systematize", "Cada decisão vira token e componente reutilizável, para a próxima loja sair mais rápido e mais consistente.": "Every decision becomes a reusable token or component, so the next store ships faster and more consistently.", "Componentes": "Components", "Entregar junto": "Ship together", "Parceria próxima com devs, acompanhamento no Jira e revisão de fidelidade visual até a publicação.": "Close partnership with developers, Jira tracking, and visual QA all the way to launch.", "QA visual": "Visual QA", "Continue explorando": "Keep exploring", "Dengo, Acer, Mary Kay, Mondial, Aiwa, Wap, Balaroti, Brinox e Ellus.": "Dengo, Acer, Mary Kay, Mondial, Aiwa, Wap, Balaroti, Brinox, and Ellus.", "Um playground onde você altera os tokens e vê tudo mudar.": "A playground where you change the tokens and watch everything update.", "b8one, Admake e Tray: 15 anos de e-commerce.": "b8one, Admake, and Tray: 15 years in e-commerce.", "Produto, sistemas, liderança e ferramentas.": "Product, systems, leadership, and tools.", "Perguntas frequentes": "FAQ", "Respostas rápidas sobre minha trajetória e jeito de trabalhar.": "Quick answers about my background and how I work.", "Qual é a sua experiência com e-commerce?": "What’s your e-commerce experience?", "Mais de 15 anos. Comecei na Tray Ecommerce em 2010, passei pela Admake entre 2012 e 2020 e, desde 2020, atuo na b8one. Trabalho com VTEX (IO e FastStore), Nuvemshop e Tray, sempre com foco em conversão.": "15+ years. I started at Tray Ecommerce in 2010, worked at Admake from 2012 to 2020, and have been at b8one since 2020. I work with VTEX (IO and FastStore), Nuvemshop, and Tray, always with a focus on conversion.", "Com quais marcas você já trabalhou?": "Which brands have you worked with?", "Na b8one, dei direção visual e de experiência para Acer, Mary Kay, Dengo, Mondial, Balaroti e Ellus. Nos cases desta página, incluindo Aiwa, Wap e Brinox, atuei como Líder de UI Design.": "At b8one, I led visual and UX direction for Acer, Mary Kay, Dengo, Mondial, Balaroti, and Ellus. On every case study here, including Aiwa, Wap, and Brinox, I was the UI Design Lead.", "Como você trabalha com design systems?": "How do you work with design systems?", "Estruturei o design system turbostore/b8one, com tokens de cor, tipografia, espaçamento e ícones e uma biblioteca de componentes reutilizáveis. Os tokens são mapeados em JSON e documentados em um portal MDX/Nextra, o que aproxima design e engenharia.": "I built the turbostore/b8one design system, with color, typography, spacing, and icon tokens plus a reusable component library. Tokens are mapped to JSON and documented in an MDX/Nextra portal, which brings design and engineering closer together.", "Como é a sua atuação como líder de design?": "What does your design leadership look like?", "Faço mentoria do time de UI/UX, estruturo rituais e padronização de processos, defino OKRs de design focados em escala de conhecimento e acompanho entregas e fluxos no Jira.": "I mentor the UI/UX team, set up design rituals and standard processes, define design OKRs focused on scaling team knowledge, and track delivery and workflows in Jira.", "Você também trabalha com front-end?": "Do you also work with front-end code?", "Tenho noções de React, Next.js, Vue, Liquid e HTML/CSS. Isso me ajuda a escrever especificações claras para o front e a manter a fidelidade visual junto com os desenvolvedores.": "I have working knowledge of React, Next.js, Vue, Liquid, and HTML/CSS. It helps me write clear specs and keep the build true to the design alongside developers.", "Como posso falar com você?": "How can I reach you?", "Pela página de contato: e-mail, LinkedIn ou WhatsApp. Me conte o desafio do seu produto e eu respondo.": "Through the contact page: email, LinkedIn, or WhatsApp. Tell me about your product challenge and I’ll get back to you.", "Nove operações de e-commerce em que atuei como Líder de UI Design. Para cada uma: o desafio e o que eu fiz.": "Nine e-commerce businesses where I was the UI Design Lead. For each one: the challenge, what I did, and the result.", "Portfólio · 09 projetos": "Portfolio · 09 projects", "Do hero ao rodapé, em desktop e mobile": "From hero to footer, on desktop and mobile", "Segmento": "Industry", "Papel": "Role", "Líder de UI Design": "UI Design Lead", "Dispositivos": "Devices", "Desktop e mobile": "Desktop and mobile", "Entrega": "Deliverable", "Interface da home": "Homepage design", "Desafio": "Challenge", "O que eu fiz": "What I did", "Resultado": "Result", "[preencher]": "[add metric]", "Métrica principal, ex.: +X% de conversão no mobile ou −Y% de rejeição na home.": "Key metric, e.g. +X% mobile conversion or −Y% homepage bounce rate.", "Selecione um projeto na lista. Clique no mockup para ver a página completa.": "Pick a project from the list. Click the mockup to see the full page.", "Home com foco em descoberta de produto e presentes, banners editoriais e benefícios de entrega em destaque.": "Homepage focused on product discovery and gifting, with editorial banners and shipping perks up front.", "Transformar a home em vitrine de presentes e de descoberta, sem perder a sensação premium da marca.": "Turn the homepage into a gift and discovery showcase without losing the brand’s premium feel.", "Interface para lançamentos de notebooks gamer, com barra de benefícios e navegação por categorias.": "Interface for gaming laptop launches, with a benefits bar and category navigation.", "Apresentar lançamentos gamer e um catálogo técnico extenso sem sobrecarregar quem chega na home.": "Showcase new gaming launches and a large technical catalog without overwhelming homepage visitors.", "Home com vitrines de categorias, campanhas de lançamento e atalhos de promoção.": "Homepage with category shelves, launch campaigns, and promo shortcuts.", "Equilibrar campanhas de lançamento e promoções com uma navegação clara por categorias de beleza.": "Balance launch campaigns and promotions with clear navigation across beauty categories.", "Navegação por departamentos e categorias, com cards claros e vitrines para um catálogo amplo.": "Department and category navigation, with clean cards and shelves for a large catalog.", "Organizar um catálogo amplo de eletrodomésticos para o cliente achar o produto certo em poucos cliques.": "Organize a large appliance catalog so shoppers find the right product in just a few clicks.", "Loja de áudio com navegação por categorias, ofertas em destaque e banners de produto.": "Audio store with category navigation, featured deals, and product banners.", "Dar destaque a ofertas e lançamentos de áudio mantendo a navegação por categoria simples.": "Highlight audio deals and new releases while keeping category navigation simple.", "Soluções por ambiente, vitrines de produtos e blocos de ajuda e assistência técnica.": "Shop-by-room solutions, product shelves, and help and repair service blocks.", "Vender pelo uso, não só pelo produto, e ainda dar acesso fácil a ajuda e assistência técnica.": "Sell by use case, not just by product, and give easy access to help and repair service.", "Home de materiais de construção e casa, com ofertas, categorias em destaque e vitrines por seção.": "Home improvement homepage with deals, featured categories, and section-based shelves.", "Trazer clareza a um varejo de construção e casa, com muitas categorias e ofertas disputando atenção.": "Bring clarity to a home improvement retailer with many categories and deals competing for attention.", "Vitrines por tipo de panela, ofertas por tempo limitado e navegação por ambiente.": "Shelves by cookware type, limited-time deals, and shop-by-room navigation.", "Ajudar o cliente a escolher entre muitos tipos de panela e aproveitar ofertas com prazo.": "Help shoppers choose among many types of cookware and act on limited-time deals.", "Experiência de moda com hero em tela cheia, navegação enxuta e campanhas sazonais.": "Fashion experience with a full-screen hero, streamlined navigation, and seasonal campaigns.", "Traduzir o posicionamento de moda da marca em uma loja enxuta, guiada por campanhas sazonais.": "Translate the brand’s fashion positioning into a lean store driven by seasonal campaigns.", "Galeria de protótipos": "Prototype gallery", "Dispositivo": "Device", "Tamanho real": "Actual size", "Alternar tamanho real": "Toggle actual size", "Case anterior": "Previous case study", "Próximo case": "Next case study", "Fechar galeria": "Close gallery", "Fechar": "Close", "Role para ver a página inteira": "Scroll to see the full page", "Cada decisão aqui é um token. Troque a cor, o raio e o espaçamento da tipografia: o site inteiro responde e o JSON mostra o que o front-end receberia.": "Every decision here is a token. Change the color, corner radius, and heading spacing: the whole site responds, and the JSON shows what the front-end would receive.", "Cor da marca": "Brand color", "Raio dos cantos": "Corner radius", "Espaçamento do título": "Heading letter spacing", "Os mesmos tokens aplicados a elementos de uma loja.": "The same tokens applied to store components.", "Comprar agora": "Buy now", "Ver detalhes": "View details", "Notebook Acer Aspire": "Acer Aspire laptop", "12x sem juros": "Pay in 12 interest-free installments", "Frete grátis": "Free shipping", "Kit skincare": "Skincare set", "A partir de R$ 129": "From R$ 129", "Mais vendido": "Best seller", "Índigo": "Indigo", "Roxo": "Purple", "Grafite": "Graphite", "Vinho": "Wine", "Verde": "Green", "Tokens Componentes Layouts Ícones": "Tokens Components Layouts Icons", "Da especificação ao código": "From spec to code", "Na b8one, estruturei o design system turbostore/b8one com tokens de cor, tipografia, espaçamento e ícones. Os tokens são mapeados em JSON e publicados em um portal de documentação MDX/Nextra, a ponte entre design e engenharia.": "At b8one, I built the turbostore/b8one design system with color, typography, spacing, and icon tokens. Tokens are mapped to JSON and published in an MDX/Nextra documentation portal, the bridge between design and engineering.", "15+ anos": "15+ years", "Da criação de temas na Tray à liderança de design na b8one.": "From building store themes at Tray to leading design at b8one.", "2020 – Presente": "2020 – Present", "Senior & Lead UI/UX Designer": "Senior UI/UX Designer & Design Lead", "Liderança:": "Leadership:", "mentoria do time de UI/UX, rituais de design, padronização de processos e OKRs focados em escala de conhecimento.": "mentor the UI/UX team, run design rituals, standardize processes, and set OKRs focused on scaling team knowledge.", "arquitetura do turbostore/b8one com tokens e biblioteca de componentes reutilizáveis.": "architected turbostore/b8one with design tokens and a reusable component library.", "Design + Engenharia:": "Design + Engineering:", "tokens em JSON e documentação em MDX/Nextra.": "tokens in JSON and documentation in MDX/Nextra.", "Grandes cases:": "Key accounts:", "Acer, Mary Kay, Dengo, Mondial, Balaroti e Ellus.": "Acer, Mary Kay, Dengo, Mondial, Balaroti, and Ellus.", "UI Designer Pleno": "UI Designer", "Interfaces web e mobile com foco em e-commerce e conversão.": "Designed web and mobile interfaces for e-commerce, focused on conversion.", "Layouts customizados, componentes e protótipos de alta fidelidade para lojas em várias plataformas.": "Created custom layouts, components, and high-fidelity prototypes for stores across multiple platforms.", "Parceria com devs front-end para garantir fidelidade visual.": "Partnered with front-end developers to make sure the build matched the design.", "Banners, peças digitais e temas para lojas virtuais na plataforma Tray.": "Designed banners, digital assets, and storefront themes on the Tray platform.", "Layouts e estrutura inicial de páginas com foco em usabilidade.": "Built page layouts and early page structure with a focus on usability.", "Formação": "Education", "Bacharelado em Design Gráfico, UNIVEM (Centro Universitário Eurípides de Marília), concluído em 2009.": "Bachelor’s Degree in Graphic Design, UNIVEM (Eurípides University Center of Marília, Brazil), 2009.", "O que": "What", "eu faço": "I do", "Estratégia de produto, execução visual e sistemas que escalam, do primeiro wireframe ao handoff para o front.": "Product strategy, visual design, and systems that scale, from the first wireframe to front-end handoff.", "Produto e UX": "Product and UX", "Acessibilidade": "Accessibility", "Specs para front": "Dev specs", "Liderança": "Leadership", "Mentoria": "Mentoring", "OKRs de design": "Design OKRs", "Gestão de entregas": "Delivery management", "Ferramentas": "Tools", "Tem um produto para evoluir?": "Have a product that needs to level up?", "Me conte o desafio. Respondo por e-mail ou WhatsApp.": "Tell me about the challenge. I reply by email or WhatsApp.", "© 2026 João Arthur de Oliveira Vasconcellos · Marília, SP": "© 2026 João Arthur de Oliveira Vasconcellos · Marília, Brazil", "Idioma": "Language"};
   var RX=[[/^Home da (.+) no desktop$/,"$1 homepage on desktop"],[/^(.+) no mobile$/,"$1 on mobile"],[/^Protótipo (desktop|mobile) da (.+)$/,"$2 $1 prototype"]];
   var RXB=[[/^(.+) homepage on desktop$/,"Home da $1 no desktop"],[/^(.+) (desktop|mobile) prototype$/,"Protótipo $2 da $1"],[/^(.+) on mobile$/,"$1 no mobile"]];
   var PT={};for(var k in EN)PT[EN[k]]=k;
@@ -1293,7 +1628,7 @@ void main(){
     var w=document.createTreeWalker(node,NodeFilter.SHOW_TEXT),n,list=[];while(n=w.nextNode())list.push(n);
     list.forEach(function(t){if(skip(t.parentElement))return;var r=tr(t.nodeValue);if(r!==null)t.nodeValue=r});
   }
-  var TT={inicio:["",""],cases:["cases","Case studies"],experiencia:["experiencia","Experience"],competencias:["competencias","Skills"],audio:["Áudio","Audio"],contato:["contato","Contact"]};
+  var TT={inicio:["",""],cases:["cases","Case studies"],experiencia:["experiencia","Experience"],competencias:["competencias","Skills"],contato:["contato","Contact"]};
   var DESC={pt:"Product Designer e Lead UI/UX com 15+ anos em e-commerce. Cases de Acer, Mary Kay, Dengo e mais, design systems e lojas VTEX que convertem.",en:"Product Designer and UI/UX Lead with 15+ years in e-commerce. Case studies for Acer, Mary Kay, Dengo, and more, plus design systems and VTEX stores that convert."};
   function title(){
     var h=location.hash.replace("#",""),t=TT[h]||TT.inicio,n=t[lang==="en"?1:0];
@@ -1502,9 +1837,8 @@ new MutationObserver(sync).observe(document.documentElement,{attributes:true,att
 <script>
 (function(){
   var g=document.getElementById("theme"),r=document.documentElement;if(!g)return;g.onclick=null;
-  var bs=g.querySelectorAll("button");
-  function sync(){var t=r.getAttribute("data-theme")==="dark"?"dark":"light";[].forEach.call(bs,function(b){b.setAttribute("aria-pressed",b.dataset.t===t?"true":"false")})}
-  [].forEach.call(bs,function(b){b.addEventListener("click",function(){r.setAttribute("data-theme",b.dataset.t);try{localStorage.setItem("jv-theme",b.dataset.t)}catch(e){}})});
+  function sync(){g.setAttribute("aria-checked",r.getAttribute("data-theme")==="dark"?"true":"false")}
+  g.addEventListener("click",function(){var n=r.getAttribute("data-theme")==="dark"?"light":"dark";r.setAttribute("data-theme",n);try{localStorage.setItem("jv-theme",n)}catch(e){}});
   new MutationObserver(sync).observe(r,{attributes:true,attributeFilter:["data-theme"]});sync();
 })();
 </script>
@@ -1513,5 +1847,18 @@ new MutationObserver(sync).observe(document.documentElement,{attributes:true,att
 function u(){var en=(document.documentElement.lang||"").indexOf("en")===0;try{t.textContent=new Intl.DateTimeFormat(en?"en-US":"pt-BR",{hour:"2-digit",minute:"2-digit",timeZone:"America/Sao_Paulo"}).format(new Date())}catch(e){}}
 u();setInterval(u,30000);new MutationObserver(u).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});})();
 </script>
+<script>
+(function(){
+  var it=document.querySelectorAll("#reel2 .ri"),hc=document.querySelector(".hc");
+  if(hc&&it.length){
+    var dots=hc.querySelector(".hc-dots");
+    var sync=function(){var i=[].findIndex.call(dots.children,function(b){return b.getAttribute("aria-current")==="true"});if(i<0)i=0;if(it[i])hc.style.setProperty("--cc",it[i].style.getPropertyValue("--cc"))};
+    new MutationObserver(sync).observe(dots,{attributes:true,subtree:true,attributeFilter:["aria-current"]});sync();
+  }
+  [].forEach.call(document.querySelectorAll(".reel"),function(r){if(!r.style.getPropertyValue("--cc")){var on=r.querySelector(".ri.on");if(on)r.style.setProperty("--cc",on.style.getPropertyValue("--cc"))}});
+})();
+</script>
 </body>
 </html>
+
+</body></html>
