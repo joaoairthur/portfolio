@@ -1858,6 +1858,56 @@ u();setInterval(u,30000);new MutationObserver(u).observe(document.documentElemen
   [].forEach.call(document.querySelectorAll(".reel"),function(r){if(!r.style.getPropertyValue("--cc")){var on=r.querySelector(".ri.on");if(on)r.style.setProperty("--cc",on.style.getPropertyValue("--cc"))}});
 })();
 </script>
+<style>
+.lgpd{position:fixed;left:16px;bottom:16px;z-index:9999;max-width:420px;padding:18px 20px;border-radius:16px;background:var(--surface,#fff);color:var(--ink,#0B2239);border:1px solid var(--line,#E3E8EE);box-shadow:0 24px 48px -16px rgba(11,34,57,.28),0 4px 12px rgba(11,34,57,.08);font-size:.88rem;line-height:1.5;transform:translateY(24px);opacity:0;visibility:hidden;transition:transform .4s,opacity .4s,visibility .4s}
+.lgpd.on{transform:none;opacity:1;visibility:visible}
+.lgpd b{display:block;font-size:.95rem;margin-bottom:4px}
+.lgpd p{margin:0 0 14px;color:var(--muted,#4A5B6E)}
+.lgpd-b{display:flex;gap:8px;flex-wrap:wrap}
+.lgpd button{font:inherit;font-weight:600;padding:9px 16px;border-radius:999px;cursor:pointer;border:1px solid var(--line,#E3E8EE);background:transparent;color:inherit}
+.lgpd button.ok{background:var(--accent,#5A4FF3);border-color:var(--accent,#5A4FF3);color:#fff}
+.lgpd button:focus-visible{outline:2px solid var(--accent,#5A4FF3);outline-offset:2px}
+@media(max-width:560px){.lgpd{left:12px;right:12px;bottom:12px;max-width:none}}
+@media(prefers-reduced-motion:reduce){.lgpd{transition:none}}
+</style>
+<div class="lgpd" id="lgpd" role="dialog" aria-live="polite" aria-labelledby="lgpd-t">
+  <b id="lgpd-t"></b><p id="lgpd-p"></p>
+  <div class="lgpd-b"><button type="button" class="ok" id="lgpd-ok"></button><button type="button" id="lgpd-no"></button></div>
+</div>
+<script>
+/* ===== Aviso LGPD + Google Tag Manager (só carrega após o aceite) ===== */
+(function(){
+  var GTM_ID="GTM-TQ2VLL39";
+  var KEY="jv-consent",box=document.getElementById("lgpd"),loaded=false;
+  var T={pt:{t:"Privacidade e dados (LGPD)",p:"Este site usa o Google Analytics para coletar dados anônimos de navegação (páginas visitadas, dispositivo, origem do acesso e cliques em contato) e entender como o portfólio é usado. Os dados só são coletados se você aceitar, e você pode mudar de ideia a qualquer momento no rodapé. Controlador: João Arthur de Oliveira Vasconcellos.",ok:"Aceitar",no:"Recusar",ft:"Privacidade e cookies"},
+         en:{t:"Privacy and data (LGPD)",p:"This site uses Google Analytics to collect anonymous browsing data (pages viewed, device, traffic source and contact clicks) to understand how the portfolio is used. Data is only collected if you accept, and you can change your mind anytime from the footer. Controller: João Arthur de Oliveira Vasconcellos.",ok:"Accept",no:"Decline",ft:"Privacy and cookies"}};
+  function L(){return (document.documentElement.lang||"").indexOf("en")===0?T.en:T.pt}
+  function text(){var l=L();document.getElementById("lgpd-t").textContent=l.t;document.getElementById("lgpd-p").textContent=l.p;document.getElementById("lgpd-ok").textContent=l.ok;document.getElementById("lgpd-no").textContent=l.no;var f=document.getElementById("lgpd-open");if(f)f.textContent=l.ft}
+  function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function set(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  function show(){text();box.classList.add("on")}
+  function hide(){box.classList.remove("on")}
+  function load(){
+    if(loaded||!/^GTM-[A-Z0-9]{4,}$/.test(GTM_ID))return;loaded=true;
+    var dl=window.dataLayer=window.dataLayer||[];
+    dl.push({"gtm.start":new Date().getTime(),event:"gtm.js"});
+    var sc=document.createElement("script");sc.async=true;sc.src="https://www.googletagmanager.com/gtm.js?id="+GTM_ID;document.head.appendChild(sc);
+    function pv(){var h=(location.hash||"#inicio").replace("#","")||"inicio";dl.push({event:"virtual_page_view",page_title:document.title+" · "+h,page_location:location.origin+location.pathname+"#"+h,page_path:"/"+h})}
+    pv();addEventListener("hashchange",pv);
+    document.addEventListener("click",function(e){var a=e.target.closest&&e.target.closest("a[href]");if(!a)return;var h=a.getAttribute("href")||"",t=null;
+      if(h.indexOf("wa.me")>-1)t="whatsapp";else if(h.indexOf("mailto:")===0)t="email";else if(h.indexOf("linkedin.com")>-1)t="linkedin";
+      if(t)dl.push({event:"contact_click",method:t,link_url:h})});
+    var th=document.getElementById("theme");if(th)th.addEventListener("click",function(){dl.push({event:"theme_toggle",theme:document.documentElement.getAttribute("data-theme")})});
+  }
+  document.getElementById("lgpd-ok").onclick=function(){set("granted");hide();load()};
+  document.getElementById("lgpd-no").onclick=function(){set("denied");hide();};
+  /* link permanente no rodapé para rever a escolha */
+  var fn=document.querySelector('footer nav');
+  if(fn){var b=document.createElement("a");b.href="#";b.id="lgpd-open";b.onclick=function(e){e.preventDefault();show()};fn.appendChild(b)}
+  new MutationObserver(text).observe(document.documentElement,{attributes:true,attributeFilter:["lang"]});
+  text();var c=get();if(c==="granted")load();else if(c!=="denied")show();
+})();
+</script>
 </body>
 </html>
 
